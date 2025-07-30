@@ -1,0 +1,128 @@
+'use client';
+
+import { TypeAnimation } from 'react-type-animation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaArrowDown } from 'react-icons/fa6';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import { setupParallaxEffect } from '../utils/parallax';
+import { setupScrollAnimations } from '../utils/scroll-animate';
+
+export default function Hero() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    setupParallaxEffect('hero-content');
+    setupScrollAnimations();
+  }, []);
+
+  // Éviter le mismatch d'hydratation en attendant que le thème soit disponible
+  if (!mounted) {
+    return (
+      <section
+        id="home"
+        className="hero-section min-h-screen flex items-center bg-gray-50 dark:bg-gray-900"
+      >
+        {/* Contenu de fallback pendant l'hydratation */}
+        <div className="container mx-auto px-6 py-16">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 lg:w-2/3 text-center md:text-left">
+              <div id="hero-content" className="hero-content">
+                <h1 className="fade-in-start text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-4 leading-tight">
+                  Transformez vos idées en expériences numériques exceptionnelles
+                </h1>
+                <p className="fade-in-start text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-2 leading-relaxed">Bonjour ! Je suis DIARRA Boh</p>
+                <div className="fade-in-start text-lg sm:text-2xl font-bold h-12 sm:h-16 md:h-auto">
+                  <span className="inline-block bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">
+                    Développeur Web
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section
+      id="home"
+      className={`hero-section min-h-screen flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}
+    >
+      <div className="container mx-auto px-6 py-16">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 lg:w-2/3 text-center md:text-left">
+            <div id="hero-content" className="hero-content">
+              <h1 className="fade-in-start text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-4 leading-tight">
+                Transformez vos idées en expériences numériques exceptionnelles
+              </h1>
+              <p className="fade-in-start text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-2 leading-relaxed">Bonjour ! Je suis DIARRA Boh</p>
+              <div className="fade-in-start text-lg sm:text-2xl font-bold h-12 sm:h-16 md:h-auto">
+                  <TypeAnimation
+                    sequence={[
+                      'Développeur Web',
+                    1500,
+                      'Développeur Mobile',
+                    1500,
+                      'Community Manager',
+                    1500,
+                    'Spécialiste IT Support',
+                    1500,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  className="inline-block bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent"
+                  />
+              </div>
+              <div className="hero-btn mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full">
+                <a
+                  href="/img/CV_Boh_DIARRA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-base bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white py-3 px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[48px] focus-visible:ring-2 ring-orange-500 font-bold text-lg transition-all duration-300 hover:from-[#ff6b35] hover:to-[#FD9800]"
+                >
+                  Télécharger CV
+                </a>
+                <Link
+                  href="#en-savoir-plus"
+                  className="btn-base flex items-center gap-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 py-3 px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[48px] focus-visible:ring-2 ring-orange-500 transition-all duration-300 font-bold text-lg hover:bg-gradient-to-r hover:from-[#FD9800] hover:to-[#ff6b35] hover:text-white"
+                >
+                  En savoir plus... <FaArrowDown size={16} />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 lg:w-1/3 mt-8 md:mt-0 flex justify-center">
+            <div className="hero-image relative flex items-end justify-center">
+              {/* Halo orange 3D en arrière-plan */}
+              <div className="absolute -inset-4 z-0 rounded-3xl bg-gradient-to-br from-[#FD9800]/30 to-[#ff6b35]/10 blur-2xl opacity-80 pointer-events-none animate-pulse"></div>
+              <div className="relative flex items-end justify-center">
+                {/* Bordure extérieure inférieure gradient orange */}
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[300px] md:h-7 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-b-3xl shadow-lg z-0"></div>
+                <div className="relative overflow-hidden rounded-3xl shadow-3xl ring-4 ring-white dark:ring-gray-900 w-[200px] h-[260px] sm:w-[240px] sm:h-[300px] md:w-[280px] md:h-[340px] z-10 flex items-end justify-center">
+              <Image
+                    src="/img/Profil.webp"
+                alt="Diarra Boh"
+                    fill
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    className="w-full h-full"
+                    sizes="(max-width: 640px) 180px, (max-width: 768px) 250px, 350px"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 

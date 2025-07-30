@@ -1,0 +1,871 @@
+@import "tailwindcss";
+@import '../styles/components.css';
+
+/* === RESPONSIVE DESIGN OPTIMIZATIONS === */
+
+/* Mobile-first base styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  transition: background-color 0.4s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+/* Responsive typography scale */
+@media (max-width: 475px) {
+  html { font-size: 14px; }
+}
+
+@media (min-width: 476px) and (max-width: 640px) {
+  html { font-size: 15px; }
+}
+
+@media (min-width: 641px) and (max-width: 860px) {
+  html { font-size: 16px; }
+}
+
+@media (min-width: 861px) {
+  html { font-size: 16px; }
+}
+
+/* Container responsive padding */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 860px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* === PALETTE OPTIMISÉE POUR LE MODE CLAIR === */
+
+/* Backgrounds optimisés */
+html:not(.dark) {
+  background-color: #fafafa !important;
+}
+
+html:not(.dark) body {
+  background-color: #fafafa !important;
+  color: #4a5568 !important;
+}
+
+/* Global theme application */
+html {
+  transition: background-color 0.4s ease;
+}
+
+body {
+  transition: background-color 0.4s ease;
+}
+
+/* Force background on all homepage sections except hero */
+section[id="about"], 
+section[id="service"], 
+section[id="portfolio"], 
+section[id="review"], 
+section[id="team"],
+section[id="skills"],
+section[id="experience"],
+section[id="en-savoir-plus"] {
+  background-color: white !important;
+  transition: background-color 0.4s ease;
+}
+
+html.dark section[id="about"], 
+html.dark section[id="service"], 
+html.dark section[id="portfolio"], 
+html.dark section[id="review"], 
+html.dark section[id="team"],
+html.dark section[id="skills"],
+html.dark section[id="experience"],
+html.dark section[id="en-savoir-plus"] {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+}
+
+/* Hero section should follow its own theme rules */
+section[id="home"] {
+  /* Let the component handle its own styling */
+}
+
+/* Force theme on any page using competences-page class */
+.competences-page {
+  background-color: #fafafa !important;
+  transition: background-color 0.4s ease;
+}
+
+html.dark .competences-page {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+}
+
+/* Force theme on Learning component sections within competences page */
+.competences-page section {
+  background-color: white !important;
+  transition: background-color 0.4s ease;
+}
+
+html.dark .competences-page section {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+}
+
+/* === RESPONSIVE ANIMATIONS === */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* === RESPONSIVE COMPONENTS === */
+
+/* Card responsive design */
+.card-base {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 640px) {
+  .card-base {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .card-base {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Button responsive sizing */
+.btn-base {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px; /* Touch target size */
+}
+
+@media (max-width: 640px) {
+  .btn-base {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .btn-base {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Grid responsive adjustments */
+@media (max-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 860px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 861px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* === NAVBAR RESPONSIVE IMPROVEMENTS === */
+
+/* Navbar backdrop improvements */
+header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Mobile menu improvements */
+@media (max-width: 1199px) {
+  .mobile-menu {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* === TITRE RESPONSIVE === */
+
+/* Responsive headings */
+@media (max-width: 640px) {
+  h1 { font-size: 1.875rem; line-height: 2.25rem; }
+  h2 { font-size: 1.5rem; line-height: 2rem; }
+  h3 { font-size: 1.25rem; line-height: 1.75rem; }
+}
+
+@media (min-width: 641px) and (max-width: 860px) {
+  h1 { font-size: 2.25rem; line-height: 2.5rem; }
+  h2 { font-size: 1.875rem; line-height: 2.25rem; }
+  h3 { font-size: 1.5rem; line-height: 2rem; }
+}
+
+@media (min-width: 861px) {
+  h1 { font-size: 2.5rem; line-height: 1; }
+  h2 { font-size: 2rem; line-height: 2.5rem; }
+  h3 { font-size: 1.75rem; line-height: 2.25rem; }
+}
+
+/* === OPTIMISATIONS SPÉCIFIQUES PAGE COMPÉTENCES === */
+
+/* Cartes de compétences optimisées */
+html:not(.dark) .text-gray-600 {
+  color: #4a5568 !important;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #718096 !important;
+}
+
+html:not(.dark) .text-gray-400 {
+  color: #a0aec0 !important;
+}
+
+/* Cartes optimisées */
+html:not(.dark) .card-base,
+html:not(.dark) .about-card,
+html:not(.dark) .timeline-card {
+  background-color: white !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Amélioration du contraste pour le mode clair */
+.text-gray-600 {
+  transition: color 0.3s ease;
+}
+
+.text-gray-500 {
+  transition: color 0.3s ease;
+}
+
+/* === RESTAURATION COULEURS TEXTE SPÉCIFIQUES === */
+
+/* Textes optimisés pour la lisibilité en mode clair */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+  color: #1a202c !important; /* Noir profond pour titres */
+}
+
+html:not(.dark) .text-gray-800 {
+  color: #2d3748 !important; /* Gris très foncé */
+}
+
+html:not(.dark) .text-gray-700 {
+  color: #4a5568 !important; /* Texte principal */
+}
+
+html:not(.dark) .text-gray-600 {
+  color: #4a5568 !important; /* Contenu */
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #718096 !important; /* Texte secondaire */
+}
+
+html:not(.dark) .text-gray-400 {
+  color: #a0aec0 !important; /* Texte subtle */
+}
+
+/* Textes spécifiques Timeline */
+html:not(.dark) .timeline-card .text-gray-700 {
+  color: #374151 !important;
+}
+
+html:not(.dark) .timeline-card .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+/* Textes spécifiques About section */
+html:not(.dark) .about-card .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+html:not(.dark) .about-card .text-gray-600 {
+  color: #4a5568 !important;
+}
+
+/* Textes spécifiques Services */
+html:not(.dark) .service-item .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+html:not(.dark) .service-item .text-gray-600 {
+  color: #4a5568 !important;
+}
+
+html:not(.dark) .service-item .text-gray-700 {
+  color: #374151 !important;
+}
+
+/* Textes spécifiques Portfolio */
+html:not(.dark) .section-header .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+/* Textes spécifiques Team */
+html:not(.dark) .team-text .text-gray-600 {
+  color: #4a5568 !important;
+}
+
+html:not(.dark) .team-text .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Textes spécifiques Skills */
+html:not(.dark) .text-gray-700 {
+  color: #374151 !important;
+}
+
+/* Textes spécifiques Testimonials */
+html:not(.dark) .testimonial-text .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* === OPTIMISATIONS COMPÉTENCES PAGE SPÉCIFIQUE === */
+
+/* Textes spécifiques compétences en mode clair */
+html:not(.dark) .competences-page .text-gray-800 {
+  color: #1a202c !important; /* Noms des compétences - noir profond */
+}
+
+html:not(.dark) .competences-page .text-gray-700 {
+  color: #2d3748 !important; /* Labels comme "Niveau" */
+}
+
+html:not(.dark) .competences-page .text-gray-600 {
+  color: #4a5568 !important; /* Descriptions des compétences */
+}
+
+html:not(.dark) .competences-page .text-gray-500 {
+  color: #718096 !important; /* Années d'expérience */
+}
+
+html:not(.dark) .competences-page .text-gray-400 {
+  color: #a0aec0 !important; /* Textes subtils */
+}
+
+/* Section Learning optimisée */
+html:not(.dark) .competences-page .text-gray-300 {
+  color: #4a5568 !important; /* Description Learning en mode clair */
+}
+
+/* Cartes compétences optimisées */
+/* .competences-page .bg-white {
+  background-color: white !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+} */
+
+.competences-page .bg-gray-200 {
+  background-color: #f3f4f6 !important; /* Progress bar background */
+}
+
+/* Titres de catégories (gradients conservés) */
+.competences-page .bg-clip-text {
+  /* Les gradients restent intacts */
+}
+
+/* Navbar */
+header, nav {
+  transition: background-color 0.4s, color 0.4s;
+}
+
+button, .btn {
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+a {
+  transition: color 0.4s;
+}
+
+/* === COULEURS SOCIALES AVEC RESPONSIVE === */
+
+/* Couleurs officielles des réseaux sociaux */
+.icon-social {
+  transition: all 0.3s ease;
+}
+
+.icon-social:hover {
+  transform: scale(1.1);
+}
+
+/* GitHub - noir en light mode, blanc en dark mode avec meilleur contraste */
+.icon-social svg[data-icon="github"], 
+.icon-social[data-icon="github"] {
+  color: #1a1a1a !important;
+}
+.dark .icon-social svg[data-icon="github"], 
+.dark .icon-social[data-icon="github"] {
+  color: #ffffff !important;
+}
+
+/* Discord - violet */
+.icon-social svg[data-icon="discord"],
+.icon-social[data-icon="discord"] {
+  color: #5865F2 !important;
+}
+
+/* WhatsApp - vert */
+.icon-social svg[data-icon="whatsapp"],
+.icon-social[data-icon="whatsapp"] {
+  color: #25D366 !important;
+}
+
+/* Facebook - bleu */
+.icon-social svg[data-icon="facebook"],
+.icon-social[data-icon="facebook"] {
+  color: #1877F2 !important;
+}
+
+/* LinkedIn - bleu */
+.icon-social svg[data-icon="linkedin"],
+.icon-social[data-icon="linkedin"] {
+  color: #0A66C2 !important;
+}
+
+/* === COMPOSANT LEARNING - ADAPTATION THÉMATIQUE === */
+
+/* Mode clair - cartes Learning */
+html:not(.dark) section:has(.grid) .bg-white {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+html:not(.dark) section:has(.grid) .text-gray-900 {
+  color: #111827 !important;
+}
+
+html:not(.dark) section:has(.grid) .text-gray-700 {
+  color: #374151 !important;
+}
+
+html:not(.dark) section:has(.grid) .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Mode sombre - cartes Learning */
+html.dark section:has(.grid) .dark\:bg-\[#23272f\] {
+  background-color: #23272f !important;
+}
+
+html.dark section:has(.grid) .dark\:border-\[#FD9800\] {
+  border-color: #FD9800 !important;
+}
+
+html.dark section:has(.grid) .dark\:text-white {
+  color: #ffffff !important;
+}
+
+html.dark section:has(.grid) .dark\:text-gray-300 {
+  color: #d1d5db !important;
+}
+
+html.dark section:has(.grid) .dark\:text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* === CARTES COMPÉTENCES - ADAPTATION THÉMATIQUE === */
+
+/* Mode clair - cartes de compétences */
+html:not(.dark) .competences-page .bg-white {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+html:not(.dark) .competences-page .text-gray-900 {
+  color: #111827 !important;
+}
+
+html:not(.dark) .competences-page .text-gray-700 {
+  color: #374151 !important;
+}
+
+html:not(.dark) .competences-page .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+/* Mode sombre - cartes de compétences */
+html.dark .competences-page .dark\:bg-\[#23272f\] {
+  background-color: #23272f !important;
+}
+
+html.dark .competences-page .dark\:border-\[#FD9800\] {
+  border-color: #FD9800 !important;
+}
+
+html.dark .competences-page .dark\:text-\[#FD9800\] {
+  color: #FD9800 !important;
+}
+
+html.dark .competences-page .dark\:text-gray-300 {
+  color: #d1d5db !important;
+}
+
+html.dark .competences-page .dark\:text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* === THÈME HERO === */
+
+/* Différenciation de la section Hero en mode dark */
+html.dark #home {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+}
+
+/* Forcer le dégradé bleu-teal pour le titre principal en mode clair */
+html:not(.dark) #home h1 {
+  background: linear-gradient(90deg, #3b82f6 0%, #14b8a6 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* S'assurer que le dégradé reste en mode dark aussi */
+html.dark #home h1 {
+  background: linear-gradient(90deg, #3b82f6 0%, #14b8a6 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* === NAVBAR RESPONSIVE FINAL === */
+
+/* Amélioration de la visibilité de la navbar en mode clair */
+html:not(.dark) header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* CORRECTION CRITIQUE: Forcer le fond blanc des sous-menus en mode clair */
+html:not(.dark) header .group:hover > div[class*="absolute"] {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Forcer les liens des sous-menus en mode clair */
+html:not(.dark) header .group:hover > div[class*="absolute"] a {
+  color: #111827 !important; /* text-gray-900 */
+}
+
+html:not(.dark) header .group:hover > div[class*="absolute"] a:hover {
+  color: #ea580c !important; /* text-orange-600 */
+  background-color: #f3f4f6 !important; /* bg-gray-100 */
+}
+
+/* État actif des sous-menus en mode clair */
+html:not(.dark) header .group:hover > div[class*="absolute"] a[class*="bg-orange"] {
+  color: #ea580c !important;
+  background-color: #fed7aa !important; /* bg-orange-50 */
+}
+
+/* Mobile submenu fixes - CORRIGÉ */
+html:not(.dark) .mobile-menu {
+  background-color: rgba(249, 250, 251, 0.95) !important; /* bg-gray-50 avec transparence */
+}
+
+html:not(.dark) .mobile-menu a {
+  color: #1f2937 !important; /* text-gray-800 */
+}
+
+html:not(.dark) .mobile-menu a:hover {
+  color: #ea580c !important; /* text-orange-600 */
+  background-color: #fef3c7 !important; /* bg-orange-50 */
+}
+
+/* Liens de navigation en mode clair - amélioration du contraste */
+html:not(.dark) header nav a {
+  color: #1f2937 !important; /* text-gray-800 */
+  font-weight: 500 !important;
+}
+
+html:not(.dark) header nav a:hover {
+  color: #ea580c !important; /* text-orange-600 */
+}
+
+/* Nom/logo principal en mode clair */
+html:not(.dark) header .text-gray-800 {
+  color: #1f2937 !important; /* text-gray-800 */
+  font-weight: 600 !important;
+}
+
+/* Boutons mobiles en mode clair */
+html:not(.dark) header button {
+  background: #f3f4f6 !important; /* bg-gray-100 */
+  color: #374151 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* === FOOTER RESPONSIVE === */
+
+/* Titres des colonnes footer en mode clair */
+html:not(.dark) footer h3:not(.text-\[#FD9800\]) {
+  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  font-weight: bold !important;
+}
+
+html:not(.dark) footer h4 {
+  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  font-weight: bold !important;
+}
+
+/* Titre principal avec orange conservé */
+html:not(.dark) footer .text-\[#FD9800\] {
+  color: #FD9800 !important;
+}
+
+/* Cards contact info en mode clair */
+html:not(.dark) footer .bg-gray-800 {
+  background-color: #4a5568 !important;
+}
+
+/* Links et navigation en mode clair - SEULEMENT pour les liens non-footer-link */
+html:not(.dark) footer a:not(.footer-link) {
+  transition: color 0.3s ease;
+}
+
+html:not(.dark) footer a:not(.footer-link):hover {
+  color: #FD9800 !important;
+}
+
+/* Forcer les couleurs des textes secondaires et liens dans le footer en mode clair */
+html:not(.dark) footer p.text-black {
+  color: #000000 !important;
+}
+
+html:not(.dark) footer .footer-link {
+  color: #000000 !important;
+}
+
+html:not(.dark) footer {
+  background-color: #f9fafb !important;
+}
+html.dark footer {
+  background-color: #18181b !important;
+}
+
+/* === SWIPER RESPONSIVE === */
+
+/* Swiper custom navigation and pagination styles for gradient color */
+.swiper-button-next, .swiper-button-prev {
+  color: #FD9800;
+  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 2rem;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1.5rem;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%);
+  opacity: 0.5;
+}
+
+/* === OPTIMIZATIONS PERFORMANCE === */
+
+/* Optimize repaints and reflows */
+* {
+  box-sizing: border-box;
+}
+
+/* GPU acceleration for animations */
+.animate-fade-in-up,
+.animate-slide-in-right,
+.animate-scale-in,
+.card-base,
+.btn-base {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Smooth scrolling for all devices */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible improvements */
+*:focus-visible {
+  outline: 2px solid #FD9800;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 860px) {
+  /* Larger touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better spacing for touch */
+  .space-x-2 > * + * {
+    margin-left: 1rem;
+  }
+  
+  .space-y-2 > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.portfolio-title-force-white {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 2px rgba(0,0,0,0.15);
+  mix-blend-mode: lighten;
+  position: relative;
+  z-index: 10;
+}
+
+html:not(.dark) footer .footer-link:hover {
+  color: #FD9800 !important;
+  background-color: transparent !important;
+}
+
+/* Styles personnalisés pour les témoignages - Points de navigation uniquement */
+.testimonials-section .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: linear-gradient(135deg, #FD9800, #ff6b35) !important;
+  opacity: 0.6 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 4px rgba(253, 152, 0, 0.3) !important;
+}
+
+.testimonials-section .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 4px 8px rgba(253, 152, 0, 0.5) !important;
+}
+
+/* Version mobile - points plus petits et flèches réduites */
+@media (max-width: 768px) {
+  .testimonials-section .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .testimonials-section .swiper-button-next,
+  .testimonials-section .swiper-button-prev {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  .testimonials-section .swiper-button-next::after,
+  .testimonials-section .swiper-button-prev::after {
+    font-size: 30px !important;
+  }
+}

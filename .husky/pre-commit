@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run linting
+cd apps/portfolio-next && npm run lint
+
+# Run type checking
+cd apps/portfolio-next && npm run type-check
+
+# Run tests if they exist
+# cd apps/portfolio-next && npm test 
