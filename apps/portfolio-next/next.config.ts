@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   // Compression et optimisation
   compress: true,
   
+  // Configuration de l'URL de base
+  basePath: '',
+  trailingSlash: false,
+  
   // Headers de sécurité et performance
   async headers() {
     return [
@@ -74,7 +78,23 @@ const nextConfig: NextConfig = {
   
   // Optimisation des redirections
   async redirects() {
-    return [];
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/portfolio',
+        destination: '/#portfolio',
+        permanent: false,
+      },
+      {
+        source: '/contact',
+        destination: '/#contact',
+        permanent: false,
+      },
+    ];
   },
   
   // Optimisation des rewrites

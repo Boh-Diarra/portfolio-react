@@ -42,8 +42,21 @@ export default function Header() {
   } = useMobileMenu();
 
   const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  // Gestion du scroll pour la navbar transparente
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 8); // Seuil de 8px comme demandé
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const { activeDropdown, setActiveDropdown, toggleDropdown } = useDropdown<string | null>(null);
@@ -52,7 +65,7 @@ export default function Header() {
   // Puis seulement ensuite le test
   if (!mounted) {
     return (
-      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
+      <header className={`backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
         <nav className="container mx-auto px-4 tablet:px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold text-gray-800 dark:text-gray-100">
@@ -66,7 +79,7 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
+    <header className={`backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="container mx-auto px-4 tablet:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}

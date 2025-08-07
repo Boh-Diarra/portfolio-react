@@ -58,10 +58,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Présentation et Contact */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">Boh DIARRA</h3>
+            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">Parlons de Votre Projet</h3>
             <p className="mb-6 leading-relaxed text-black dark:text-white">
-            Votre partenaire digital de confiance pour des solutions web et mobiles sur mesure. 
-             Je concrétise vos objectifs business en expériences utilisateur remarquables qui convertissent et fidélisent.
+            Décrivez votre vision et je vous proposerai une solution personnalisée
             </p>
             
             {/* Informations de contact */}
@@ -76,26 +75,26 @@ export default function Footer() {
                     variant="icon"
                     className="flex items-center gap-3 p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 group w-full"
                   >
-                    <div className="text-[#FD9800] group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
                     <div className="flex flex-col items-start">
-                      <p className="text-sm text-gray-300 font-medium">{info.title}</p>
-                      <p className="text-gray-100">{info.value}</p>
+                      <p className="text-sm font-medium">{info.title}</p>
+                      <p>{info.value}</p>
                     </div>
                   </RateLimitedContactLink>
                 ) : (
                   <a
                     key={index}
                     href={info.link}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 group hover:text-orange-gradient"
                   >
-                    <div className="text-[#FD9800] group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
                     <div>
-                      <p className="text-sm text-gray-300 font-medium">{info.title}</p>
-                      <p className="text-gray-100">{info.value}</p>
+                      <p className="text-sm font-medium">{info.title}</p>
+                      <p>{info.value}</p>
                     </div>
                   </a>
                 )
@@ -111,7 +110,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={`/#service`}
-                    className="footer-link text-black dark:text-white hover:text-[#FD9800] hover:underline transition-colors duration-300 relative group"
+                    className="footer-link transition-colors duration-300 relative group"
                   >
                     <span className="relative">
                       {service}
@@ -130,7 +129,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="footer-link text-black dark:text-white hover:text-[#FD9800] hover:underline transition-colors duration-300 relative group"
+                    className="footer-link transition-colors duration-300 relative group"
                   >
                     <span className="relative">
                       {item.name}
@@ -144,7 +143,7 @@ export default function Footer() {
           {/* Réseaux sociaux */}
           <div>
             <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">Suivez-moi</h3>
-            <p className="mb-4 text-black dark:text-white">
+            <p className="mb-4">
               Restez connecté pour découvrir mes derniers projets et actualités.
             </p>
             <SocialLinks links={socialLinks} variant="footer" />
@@ -153,9 +152,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-orange-500 dark:border-orange-500 mt-8 pt-6 text-center">
-          <p className="text-black dark:text-white">
+          <p>
             © 2025 Tous droits réservés. |
-            <span className="text-orange-500 dark:text-[#ff6b35] ml-1">By Boh DIARRA</span>
+            <span className="text-orange-800 dark:text-[#ff6b35] ml-1">By Boh DIARRA</span>
           </p>
         </div>
       </div>

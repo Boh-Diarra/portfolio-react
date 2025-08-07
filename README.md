@@ -157,9 +157,9 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 ## 👨‍💻 Auteur
 
 **Boh Diarra**
-- Portfolio: [votre-portfolio.com]
-- LinkedIn: [votre-linkedin]
-- GitHub: [votre-github]
+- Portfolio: [boh-diarra.vercel.app]
+- LinkedIn: [https://www.linkedin.com/in/boh-diarra/]
+- GitHub: [https://github.com/Boh-Diarra]
 
 ## 🙏 Remerciements
 
@@ -170,11 +170,11 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 📊 Statistiques
 
-![GitHub stars](https://img.shields.io/github/stars/votre-username/portfolio-react)
-![GitHub forks](https://img.shields.io/github/forks/votre-username/portfolio-react)
-![GitHub issues](https://img.shields.io/github/issues/votre-username/portfolio-react)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/votre-username/portfolio-react)
-![GitHub license](https://img.shields.io/github/license/votre-username/portfolio-react)
+![GitHub stars](https://img.shields.io/github/stars/Boh-Diarra/portfolio-react)
+![GitHub forks](https://img.shields.io/github/forks/Boh-Diarra/portfolio-react)
+![GitHub issues](https://img.shields.io/github/issues/Boh-Diarra/portfolio-react)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Boh-Diarra/portfolio-react)
+![GitHub license](https://img.shields.io/github/license/Boh-Diarra/portfolio-react)
 
 ---
 

@@ -61,7 +61,7 @@ export default function EnSavoirPlus() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="about-card card-base fade-in-start card-orange-shadow hover:ring-1 hover:ring-[#FD9800] bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg p-4 sm:p-8 flex flex-col items-center text-center transition-all duration-300 min-h-[320px]"
+              className="about-card card-base fade-in-start card-orange-shadow hover:ring-1 hover:ring-[#FD9800] bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 sm:p-8 flex flex-col items-center text-center transition-all duration-300 min-h-[320px]"
             >
               {card.icon}
               <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 mt-2">

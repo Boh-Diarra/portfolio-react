@@ -46,14 +46,14 @@ export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, 
 
   return (
     <div
-      className={`mobile-menu lg:hidden absolute left-0 right-0 top-full bg-gray-50/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 shadow-xl transition-all duration-300 ease-out ${
+      className={`mobile-menu lg:hidden absolute left-0 right-0 top-full bg-white dark:bg-gray-900/95 border-b border-gray-200/50 dark:border-gray-700/50 shadow-xl transition-all duration-300 ease-out ${
         isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-4 invisible'
       }`}
     >
       <div className="container mx-auto px-4 py-6">
         {/* Header with close button */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">Menu</h2>
+          <h2 className="text-xl font-bold text-black dark:text-gray-100">Menu</h2>
           <button
             onClick={onClose}
             className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -78,7 +78,7 @@ export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, 
                     className={`w-full flex items-center justify-between py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                       active
                         ? 'text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/20 border-l-4 border-orange-500'
-                        : 'text-gray-800 dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-gray-800'
+                        : 'text-black dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-gray-800'
                     }`}
                     aria-haspopup="true"
                     aria-expanded={isDropdownOpen}
@@ -114,7 +114,7 @@ export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, 
                             className={`block py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
                               isSubActive
                                 ? 'text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20'
-                                : 'text-gray-800 dark:text-gray-300 hover:text-orange-600 hover:bg-gray-100 dark:hover:text-orange-400 dark:hover:bg-gray-700'
+                                : 'text-black dark:text-gray-300 hover:text-orange-600 hover:bg-gray-100 dark:hover:text-orange-400 dark:hover:bg-gray-700'
                             }`}
                           >
                             {subLink.label}
@@ -134,7 +134,7 @@ export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, 
                 className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                   active
                     ? 'text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/20 border-l-4 border-orange-500'
-                    : 'text-gray-800 dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-gray-800'
+                    : 'text-black dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-gray-800'
                 }`}
               >
                 {link.label}

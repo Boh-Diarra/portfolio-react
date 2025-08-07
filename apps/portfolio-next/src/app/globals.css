@@ -59,17 +59,7 @@ body {
   }
 }
 
-/* === PALETTE OPTIMISÉE POUR LE MODE CLAIR === */
-
-/* Backgrounds optimisés */
-html:not(.dark) {
-  background-color: #fafafa !important;
-}
-
-html:not(.dark) body {
-  background-color: #fafafa !important;
-  color: #4a5568 !important;
-}
+/* === THÈME GLOBAL === */
 
 /* Global theme application */
 html {
@@ -79,6 +69,8 @@ html {
 body {
   transition: background-color 0.4s ease;
 }
+
+/* === SECTIONS THÈME === */
 
 /* Force background on all homepage sections except hero */
 section[id="about"], 
@@ -258,6 +250,153 @@ header {
   }
 }
 
+/* === MOBILE NAVIGATION - CORRECTION CONTRASTE === */
+
+/* Mode clair - menu mobile avec fond blanc légèrement transparent */
+html:not(.dark) .mobile-menu {
+  background-color: rgba(255, 255, 255, 0.70) !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+/* Mode sombre - menu mobile */
+html.dark .mobile-menu {
+  background-color: rgba(17, 24, 39, 0.70) !important;
+  border-bottom-color: rgba(55, 65, 81, 0.5) !important;
+}
+
+/* Mode clair - liens du menu mobile */
+html:not(.dark) .mobile-menu a,
+html:not(.dark) .mobile-menu button {
+  color: #000000 !important;
+  background-color: transparent !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mode sombre - liens du menu mobile */
+html.dark .mobile-menu a,
+html.dark .mobile-menu button {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Effet hover des liens du menu mobile - dégradé orange pour les deux modes */
+html:not(.dark) .mobile-menu a:hover,
+html:not(.dark) .mobile-menu button:hover,
+html.dark .mobile-menu a:hover,
+html.dark .mobile-menu button:hover {
+  background: linear-gradient(135deg, #FF9800, #EF6C00) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 0 4px rgba(255, 152, 0, 0.4)) !important;
+}
+
+/* État actif des liens du menu mobile - mode clair */
+html:not(.dark) .mobile-menu a[class*="text-dark"],
+html:not(.dark) .mobile-menu button[class*="text-orange"] {
+  color: #ea580c !important;
+  background-color: transparent !important;
+}
+
+/* État actif des liens du menu mobile - mode sombre */
+html.dark .mobile-menu a[class*="text-blanc"],
+html.dark .mobile-menu button[class*="text-orange"] {
+  color: #fdba74 !important;
+  background-color: rgba(31, 41, 55, 0.2) !important;
+}
+
+/* Mode clair - titre "Menu" */
+html:not(.dark) .mobile-menu h2 {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+/* Mode sombre - titre "Menu" */
+html.dark .mobile-menu h2 {
+  color: #f3f4f6 !important;
+  font-weight: 600 !important;
+}
+
+/* Mode clair - bouton hamburger */
+html:not(.dark) .mobile-menu button svg,
+html:not(.dark) header button[aria-label*="menu"] svg,
+html:not(.dark) header button[aria-label*="Menu"] svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Mode sombre - bouton hamburger (déjà correct) */
+html.dark .mobile-menu button svg,
+html.dark header button[aria-label*="menu"] svg,
+html.dark header button[aria-label*="Menu"] svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Mode clair - icône hamburger (spans) */
+html:not(.dark) header button[aria-label*="menu"] span,
+html:not(.dark) header button[aria-label*="Menu"] span {
+  background-color: #000000 !important;
+}
+
+/* Mode sombre - icône hamburger (spans) */
+html.dark header button[aria-label*="menu"] span,
+html.dark header button[aria-label*="Menu"] span {
+  background-color: #FFFFFF !important;
+}
+
+/* === NAVBAR TRANSPARENTE AVEC SCROLL === */
+
+/* État initial - fond plein */
+header {
+  background-color: #FFFFFF !important;
+  backdrop-filter: none !important;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
+  z-index: 50 !important;
+}
+
+/* État initial - mode sombre */
+html.dark header {
+  background-color: #0F172A !important;
+  backdrop-filter: none !important;
+}
+
+/* État scrolled - mode clair (spécificité renforcée) */
+header.scrolled,
+header.scrolled.backdrop-blur-md {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* État scrolled - mode sombre (spécificité renforcée) */
+html.dark header.scrolled,
+html.dark header.scrolled.backdrop-blur-md {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+}
+
+/* Styles de surcharge pour s'assurer qu'ils prennent le dessus */
+header.scrolled[class*="backdrop-blur"],
+header.scrolled[class*="bg-"] {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+}
+
+html.dark header.scrolled[class*="backdrop-blur"],
+html.dark header.scrolled[class*="bg-"] {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+}
+
 /* === TITRE RESPONSIVE === */
 
 /* Responsive headings */
@@ -279,22 +418,16 @@ header {
   h3 { font-size: 1.75rem; line-height: 2.25rem; }
 }
 
-/* === OPTIMISATIONS SPÉCIFIQUES PAGE COMPÉTENCES === */
+/* === CARTES ET COMPOSANTS THÈME === */
 
-/* Cartes de compétences optimisées */
-html:not(.dark) .text-gray-600 {
-  color: #4a5568 !important;
+/* Cartes optimisées pour les deux thèmes */
+.card-base,
+.about-card,
+.timeline-card {
+  transition: all 0.3s ease;
 }
 
-html:not(.dark) .text-gray-500 {
-  color: #718096 !important;
-}
-
-html:not(.dark) .text-gray-400 {
-  color: #a0aec0 !important;
-}
-
-/* Cartes optimisées */
+/* Mode clair - cartes */
 html:not(.dark) .card-base,
 html:not(.dark) .about-card,
 html:not(.dark) .timeline-card {
@@ -303,18 +436,18 @@ html:not(.dark) .timeline-card {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
-/* Amélioration du contraste pour le mode clair */
-.text-gray-600 {
-  transition: color 0.3s ease;
+/* Mode sombre - cartes */
+html.dark .card-base,
+html.dark .about-card,
+html.dark .timeline-card {
+  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
+  border: 1px solid rgb(55 65 81) !important; /* border-gray-700 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
 }
 
-.text-gray-500 {
-  transition: color 0.3s ease;
-}
+/* === TEXTES THÈME === */
 
-/* === RESTAURATION COULEURS TEXTE SPÉCIFIQUES === */
-
-/* Textes optimisés pour la lisibilité en mode clair */
+/* Textes optimisés pour la lisibilité */
 html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
@@ -344,108 +477,113 @@ html:not(.dark) .text-gray-400 {
   color: #a0aec0 !important; /* Texte subtle */
 }
 
-/* Textes spécifiques Timeline */
-html:not(.dark) .timeline-card .text-gray-700 {
-  color: #374151 !important;
+/* Mode sombre - textes */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #f9fafb !important; /* text-gray-50 */
 }
 
-html:not(.dark) .timeline-card .text-gray-800 {
-  color: #1f2937 !important;
+html.dark .text-gray-800 {
+  color: #f3f4f6 !important; /* text-gray-100 */
 }
 
-/* Textes spécifiques About section */
-html:not(.dark) .about-card .text-gray-800 {
-  color: #1f2937 !important;
+html.dark .text-gray-700 {
+  color: #e5e7eb !important; /* text-gray-200 */
 }
 
-html:not(.dark) .about-card .text-gray-600 {
-  color: #4a5568 !important;
+html.dark .text-gray-600 {
+  color: #d1d5db !important; /* text-gray-300 */
 }
 
-/* Textes spécifiques Services */
-html:not(.dark) .service-item .text-gray-800 {
-  color: #1f2937 !important;
+html.dark .text-gray-500 {
+  color: #9ca3af !important; /* text-gray-400 */
 }
 
-html:not(.dark) .service-item .text-gray-600 {
-  color: #4a5568 !important;
+html.dark .text-gray-400 {
+  color: #9ca3af !important; /* text-gray-400 */
 }
 
-html:not(.dark) .service-item .text-gray-700 {
-  color: #374151 !important;
-}
-
-/* Textes spécifiques Portfolio */
-html:not(.dark) .section-header .text-gray-800 {
-  color: #1f2937 !important;
-}
-
-/* Textes spécifiques Team */
-html:not(.dark) .team-text .text-gray-600 {
-  color: #4a5568 !important;
-}
-
-html:not(.dark) .team-text .text-gray-500 {
-  color: #6b7280 !important;
-}
-
-/* Textes spécifiques Skills */
-html:not(.dark) .text-gray-700 {
-  color: #374151 !important;
-}
-
-/* Textes spécifiques Testimonials */
-html:not(.dark) .testimonial-text .text-gray-500 {
-  color: #6b7280 !important;
-}
-
-/* === OPTIMISATIONS COMPÉTENCES PAGE SPÉCIFIQUE === */
-
-/* Textes spécifiques compétences en mode clair */
-html:not(.dark) .competences-page .text-gray-800 {
-  color: #1a202c !important; /* Noms des compétences - noir profond */
-}
-
-html:not(.dark) .competences-page .text-gray-700 {
-  color: #2d3748 !important; /* Labels comme "Niveau" */
-}
-
-html:not(.dark) .competences-page .text-gray-600 {
-  color: #4a5568 !important; /* Descriptions des compétences */
-}
-
-html:not(.dark) .competences-page .text-gray-500 {
-  color: #718096 !important; /* Années d'expérience */
-}
-
-html:not(.dark) .competences-page .text-gray-400 {
-  color: #a0aec0 !important; /* Textes subtils */
-}
-
-/* Section Learning optimisée */
-html:not(.dark) .competences-page .text-gray-300 {
-  color: #4a5568 !important; /* Description Learning en mode clair */
-}
-
-/* Cartes compétences optimisées */
-/* .competences-page .bg-white {
-  background-color: white !important;
-  border: 1px solid #e5e7eb !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-} */
-
-.competences-page .bg-gray-200 {
-  background-color: #f3f4f6 !important; /* Progress bar background */
-}
-
-/* Titres de catégories (gradients conservés) */
-.competences-page .bg-clip-text {
-  /* Les gradients restent intacts */
-}
+/* === NAVBAR THÈME === */
 
 /* Navbar */
 header, nav {
   transition: background-color 0.4s, color 0.4s;
+}
+
+/* Correction du contraste navbar en mode clair */
+html:not(.dark) header {
+  background-color: white !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+/* Mode sombre - navbar */
+html.dark header {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  border-bottom-color: rgb(55 65 81) !important; /* border-gray-700 */
+}
+
+/* Assurer la visibilité des liens en mode clair */
+html:not(.dark) header nav a {
+  color: #1f2937 !important; /* text-gray-800 - noir bien visible */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mode sombre - liens */
+html.dark header nav a {
+  color: #e5e7eb !important; /* text-gray-200 - blanc bien visible */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Effet hover - dégradé orange pour les deux modes */
+html:not(.dark) header nav a:hover,
+html.dark header nav a:hover {
+  background: linear-gradient(135deg, #FD9800, #ff6b35) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 0 4px rgba(253, 152, 0, 0.4)) !important;
+}
+
+/* Assurer la visibilité du logo en mode clair */
+html:not(.dark) header .text-gray-800 {
+  color: #1f2937 !important; /* text-gray-800 */
+  font-weight: 600 !important;
+}
+
+/* Mode sombre - logo (déjà correct) */
+html.dark header .text-gray-800 {
+  color: #f3f4f6 !important; /* text-gray-100 */
+  font-weight: 600 !important;
+}
+
+/* Assurer la visibilité des boutons de la navbar en mode clair */
+html:not(.dark) header button {
+  background-color: #f3f4f6 !important; /* bg-gray-100 */
+  color: #374151 !important; /* text-gray-700 */
+  border-color: #d1d5db !important; /* border-gray-300 */
+}
+
+/* Mode sombre - boutons (déjà correct) */
+html.dark header button {
+  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
+  color: #d1d5db !important; /* text-gray-300 */
+  border-color: rgb(55 65 81) !important; /* border-gray-700 */
+}
+
+/* Assurer la visibilité des icônes sociales en mode clair */
+html:not(.dark) header .icon-social {
+  color: #1a1a1a !important;
+}
+
+/* Mode sombre - icônes sociales (déjà correct) */
+html.dark header .icon-social {
+  color: #ffffff !important;
 }
 
 button, .btn {
@@ -472,8 +610,8 @@ a {
 .icon-social[data-icon="github"] {
   color: #1a1a1a !important;
 }
-.dark .icon-social svg[data-icon="github"], 
-.dark .icon-social[data-icon="github"] {
+html.dark .icon-social svg[data-icon="github"], 
+html.dark .icon-social[data-icon="github"] {
   color: #ffffff !important;
 }
 
@@ -608,74 +746,9 @@ html.dark #home h1 {
   color: transparent !important;
 }
 
-/* === NAVBAR RESPONSIVE FINAL === */
 
-/* Amélioration de la visibilité de la navbar en mode clair */
-html:not(.dark) header {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-}
 
-/* CORRECTION CRITIQUE: Forcer le fond blanc des sous-menus en mode clair */
-html:not(.dark) header .group:hover > div[class*="absolute"] {
-  background-color: white !important;
-  border-color: #e5e7eb !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-}
 
-/* Forcer les liens des sous-menus en mode clair */
-html:not(.dark) header .group:hover > div[class*="absolute"] a {
-  color: #111827 !important; /* text-gray-900 */
-}
-
-html:not(.dark) header .group:hover > div[class*="absolute"] a:hover {
-  color: #ea580c !important; /* text-orange-600 */
-  background-color: #f3f4f6 !important; /* bg-gray-100 */
-}
-
-/* État actif des sous-menus en mode clair */
-html:not(.dark) header .group:hover > div[class*="absolute"] a[class*="bg-orange"] {
-  color: #ea580c !important;
-  background-color: #fed7aa !important; /* bg-orange-50 */
-}
-
-/* Mobile submenu fixes - CORRIGÉ */
-html:not(.dark) .mobile-menu {
-  background-color: rgba(249, 250, 251, 0.95) !important; /* bg-gray-50 avec transparence */
-}
-
-html:not(.dark) .mobile-menu a {
-  color: #1f2937 !important; /* text-gray-800 */
-}
-
-html:not(.dark) .mobile-menu a:hover {
-  color: #ea580c !important; /* text-orange-600 */
-  background-color: #fef3c7 !important; /* bg-orange-50 */
-}
-
-/* Liens de navigation en mode clair - amélioration du contraste */
-html:not(.dark) header nav a {
-  color: #1f2937 !important; /* text-gray-800 */
-  font-weight: 500 !important;
-}
-
-html:not(.dark) header nav a:hover {
-  color: #ea580c !important; /* text-orange-600 */
-}
-
-/* Nom/logo principal en mode clair */
-html:not(.dark) header .text-gray-800 {
-  color: #1f2937 !important; /* text-gray-800 */
-  font-weight: 600 !important;
-}
-
-/* Boutons mobiles en mode clair */
-html:not(.dark) header button {
-  background: #f3f4f6 !important; /* bg-gray-100 */
-  color: #374151 !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
 
 /* === FOOTER RESPONSIVE === */
 
@@ -703,34 +776,266 @@ html:not(.dark) footer .text-\[#FD9800\] {
   color: #FD9800 !important;
 }
 
-/* Cards contact info en mode clair */
+/* === FOOTER CONTACT CARDS - CORRECTION COMPLÈTE === */
+
+/* Mode clair - cartes de contact */
 html:not(.dark) footer .bg-gray-800 {
   background-color: #4a5568 !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Links et navigation en mode clair - SEULEMENT pour les liens non-footer-link */
-html:not(.dark) footer a:not(.footer-link) {
-  transition: color 0.3s ease;
+html:not(.dark) footer .bg-gray-800:hover {
+  background-color: #2d3748 !important;
 }
 
-html:not(.dark) footer a:not(.footer-link):hover {
-  color: #FD9800 !important;
+/* Mode sombre - cartes de contact */
+html.dark footer .bg-gray-800 {
+  background-color: rgb(31 41 55) !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Forcer les couleurs des textes secondaires et liens dans le footer en mode clair */
-html:not(.dark) footer p.text-black {
-  color: #000000 !important;
+html.dark footer .bg-gray-800:hover {
+  background-color: rgb(55 65 81) !important;
 }
 
-html:not(.dark) footer .footer-link {
-  color: #000000 !important;
+/* === FOOTER CONTACT TEXT - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - textes dans les cartes de contact optimisés */
+html:not(.dark) footer .bg-gray-800 p {
+  color: #ffffff !important;
+  font-weight: 400 !important;
 }
 
+html:not(.dark) footer .bg-gray-800 p.text-sm {
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+}
+
+/* Mode sombre - textes dans les cartes de contact optimisés */
+html.dark footer .bg-gray-800 p {
+  color: #e2e8f0 !important;
+  font-weight: 400 !important;
+}
+
+html.dark footer .bg-gray-800 p.text-sm {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+/* === FOOTER TEXT COLORS - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - textes footer optimisés */
 html:not(.dark) footer {
   background-color: #f9fafb !important;
 }
+
+html:not(.dark) footer p.text-black {
+  color: #1a1a1a !important;
+  font-weight: 400 !important;
+}
+
+html:not(.dark) footer p.text-white {
+  color: #1a1a1a !important;
+  font-weight: 400 !important;
+}
+
+/* === FOOTER LINKS - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - liens footer optimisés */
+html:not(.dark) footer .footer-link {
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) footer .footer-link:hover {
+  color: #ea580c !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Mode sombre - textes footer optimisés */
 html.dark footer {
   background-color: #18181b !important;
+}
+
+html.dark footer p.text-black {
+  color: #f9fafb !important;
+  font-weight: 400 !important;
+}
+
+html.dark footer p.text-white {
+  color: #f9fafb !important;
+  font-weight: 400 !important;
+}
+
+/* Mode sombre - liens footer optimisés */
+html.dark footer .footer-link {
+  color: #f9fafb !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark footer .footer-link:hover {
+  color: #fdba74 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* === FOOTER OTHER LINKS - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - autres liens footer optimisés */
+html:not(.dark) footer a:not(.footer-link) {
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) footer a:not(.footer-link):hover {
+  color: #ea580c !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Mode sombre - autres liens footer optimisés */
+html.dark footer a:not(.footer-link) {
+  color: #d1d5db !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark footer a:not(.footer-link):hover {
+  color: #fdba74 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* === FOOTER TITLES - CORRECTION COMPLÈTE === */
+
+/* Mode sombre - titres footer */
+html.dark footer h3,
+html.dark footer h4 {
+  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  font-weight: bold !important;
+}
+
+/* === FOOTER SOCIAL ICONS - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - icônes sociales optimisées */
+html:not(.dark) footer .icon-social {
+  color: #1a1a1a !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) footer .icon-social svg {
+  color: #1a1a1a !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mode sombre - icônes sociales optimisées */
+html.dark footer .icon-social {
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark footer .icon-social svg {
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Couleurs spécifiques - mode clair */
+html:not(.dark) footer .icon-social[data-icon="whatsapp"] svg {
+  color: #25D366 !important;
+}
+
+html:not(.dark) footer .icon-social[data-icon="facebook"] svg {
+  color: #1877F2 !important;
+}
+
+html:not(.dark) footer .icon-social[data-icon="linkedin"] svg {
+  color: #0A66C2 !important;
+}
+
+html:not(.dark) footer .icon-social[data-icon="github"] svg {
+  color: #1a1a1a !important;
+}
+
+/* Couleurs spécifiques - mode sombre */
+html.dark footer .icon-social[data-icon="whatsapp"] svg {
+  color: #25D366 !important;
+}
+
+html.dark footer .icon-social[data-icon="facebook"] svg {
+  color: #1877F2 !important;
+}
+
+html.dark footer .icon-social[data-icon="linkedin"] svg {
+  color: #0A66C2 !important;
+}
+
+html.dark footer .icon-social[data-icon="github"] svg {
+  color: #ffffff !important;
+}
+
+/* Suppression de l'effet hover orange gradient pour les icônes sociales du footer */
+html:not(.dark) footer .icon-social:hover svg,
+html.dark footer .icon-social:hover svg {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  filter: none !important;
+  transform: scale(1.1) !important;
+}
+
+/* === FOOTER CONTACT ICONS - OPTIMISATION COMPLÈTE === */
+
+/* Mode clair - icônes de contact optimisées */
+html:not(.dark) footer .text-orange-500 {
+  color: #ea580c !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) footer .text-orange-500 svg {
+  color: #ea580c !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) footer .group:hover .text-orange-500 {
+  color: #dc2626 !important;
+}
+
+html:not(.dark) footer .group:hover .text-orange-500 svg {
+  color: #dc2626 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Mode sombre - icônes de contact optimisées */
+html.dark footer .text-orange-500 {
+  color: #fdba74 !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark footer .text-orange-500 svg {
+  color: #fdba74 !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark footer .group:hover .text-orange-500 {
+  color: #f97316 !important;
+}
+
+html.dark footer .group:hover .text-orange-500 svg {
+  color: #f97316 !important;
+  transform: scale(1.1) !important;
 }
 
 /* === SWIPER RESPONSIVE === */
@@ -829,10 +1134,10 @@ html.dark footer {
   z-index: 10;
 }
 
-html:not(.dark) footer .footer-link:hover {
-  color: #FD9800 !important;
-  background-color: transparent !important;
-}
+/* === FOOTER LINKS - CORRECTION COMPLÈTE === */
+
+/* Mode clair - liens footer */
+
 
 /* Styles personnalisés pour les témoignages - Points de navigation uniquement */
 .testimonials-section .swiper-pagination-bullet {
@@ -868,4 +1173,297 @@ html:not(.dark) footer .footer-link:hover {
   .testimonials-section .swiper-button-prev::after {
     font-size: 30px !important;
   }
+}
+
+/* === RÈGLES SPÉCIFIQUES PAGE COMPÉTENCES === */
+
+/* Page compétences - fond principal */
+.competences-page {
+  background-color: #fafafa !important;
+  transition: background-color 0.4s ease;
+}
+
+html.dark .competences-page {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+}
+
+/* Cartes de compétences - mode clair */
+html:not(.dark) .competences-page .bg-white {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+html:not(.dark) .competences-page .text-gray-900 {
+  color: #111827 !important;
+}
+
+html:not(.dark) .competences-page .text-gray-700 {
+  color: #374151 !important;
+}
+
+html:not(.dark) .competences-page .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+/* Cartes de compétences - mode sombre - CORRECTION CRITIQUE */
+html.dark .competences-page .bg-white {
+  background-color: #23272f !important;
+}
+
+html.dark .competences-page .dark\:bg-\[#23272f\] {
+  background-color: #23272f !important;
+}
+
+html.dark .competences-page .dark\:border-\[#FD9800\] {
+  border-color: #FD9800 !important;
+}
+
+html.dark .competences-page .dark\:text-\[#FD9800\] {
+  color: #FD9800 !important;
+}
+
+html.dark .competences-page .dark\:text-gray-300 {
+  color: #d1d5db !important;
+}
+
+html.dark .competences-page .dark\:text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Forcer les couleurs des textes dans les cartes en mode sombre */
+html.dark .competences-page .text-gray-900 {
+  color: #f9fafb !important; /* text-gray-50 */
+}
+
+html.dark .competences-page .text-gray-700 {
+  color: #e5e7eb !important; /* text-gray-200 */
+}
+
+html.dark .competences-page .text-gray-600 {
+  color: #d1d5db !important; /* text-gray-300 */
+}
+
+/* Section Learning dans la page compétences */
+html:not(.dark) .competences-page section {
+  background-color: white !important;
+}
+
+html.dark .competences-page section {
+  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+}
+
+/* Titres de catégories de compétences */
+html:not(.dark) .competences-page h2 {
+  color: #111827 !important;
+}
+
+html.dark .competences-page h2 {
+  color: #f9fafb !important;
+}
+
+/* Textes de description dans la page compétences */
+html:not(.dark) .competences-page p {
+  color: #4b5563 !important;
+}
+
+html.dark .competences-page p {
+  color: #d1d5db !important;
+}
+
+/* Forcer les bordures des cartes en mode sombre */
+html.dark .competences-page .border-gray-200 {
+  border-color: #FD9800 !important;
+}
+
+/* Forcer les ombres des cartes en mode sombre */
+html.dark .competences-page .shadow-sm {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* RÈGLES SPÉCIFIQUES POUR LES CARTES DE COMPÉTENCES */
+/* Forcer toutes les cartes avec bg-white en mode sombre */
+html.dark .competences-page div[class*="bg-white"] {
+  background-color: #23272f !important;
+}
+
+/* Forcer toutes les bordures en mode sombre */
+html.dark .competences-page div[class*="border-gray-200"] {
+  border-color: #FD9800 !important;
+}
+
+/* Forcer tous les textes en mode sombre */
+html.dark .competences-page .text-gray-900 {
+  color: #f9fafb !important;
+}
+
+html.dark .competences-page .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .competences-page .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+/* Forcer les titres des cartes en mode sombre */
+html.dark .competences-page h4.text-gray-900 {
+  color: #FD9800 !important;
+}
+
+/* Forcer les descriptions en mode sombre */
+html.dark .competences-page p.text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .competences-page p.text-gray-600 {
+  color: #d1d5db !important;
+}
+
+/* Forcer les années d'expérience en mode sombre */
+html.dark .competences-page p.text-gray-600 {
+  color: #9ca3af !important;
+}
+
+/* === DROPDOWNS NAVBAR - CORRECTION CONTRASTE === */
+
+/* Mode clair - dropdowns */
+html:not(.dark) header .group:hover > div[class*="absolute"],
+html:not(.dark) header div[class*="absolute"][role="menu"] {
+  background-color: #ffffff !important; /* Fond blanc */
+  border-color: #e5e7eb !important; /* Bordure grise claire */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Mode sombre - dropdowns (déjà correct) */
+html.dark header .group:hover > div[class*="absolute"],
+html.dark header div[class*="absolute"][role="menu"] {
+  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
+  border-color: rgb(55 65 81) !important; /* border-gray-700 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mode clair - liens des dropdowns */
+html:not(.dark) header .group:hover > div[class*="absolute"] a,
+html:not(.dark) header div[class*="absolute"][role="menu"] a {
+  color: #111827 !important; /* text-gray-900 - noir bien visible */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mode sombre - liens des dropdowns (déjà correct) */
+html.dark header .group:hover > div[class*="absolute"] a,
+html.dark header div[class*="absolute"][role="menu"] a {
+  color: #e5e7eb !important; /* text-gray-200 - blanc bien visible */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Effet hover des liens dans les dropdowns - dégradé orange pour les deux modes */
+html:not(.dark) header .group:hover > div[class*="absolute"] a:hover,
+html:not(.dark) header div[class*="absolute"][role="menu"] a:hover,
+html.dark header .group:hover > div[class*="absolute"] a:hover,
+html.dark header div[class*="absolute"][role="menu"] a:hover {
+  background: linear-gradient(135deg, #FD9800, #ff6b35) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 0 4px rgba(253, 152, 0, 0.4)) !important;
+}
+
+/* État actif des liens dans les dropdowns - mode clair */
+html:not(.dark) header .group:hover > div[class*="absolute"] a[class*="bg-orange"],
+html:not(.dark) header div[class*="absolute"][role="menu"] a[class*="bg-orange"] {
+  color: #ea580c !important; /* text-orange-600 */
+  background-color: #fed7aa !important; /* bg-orange-50 */
+}
+
+/* État actif des liens dans les dropdowns - mode sombre */
+html.dark header .group:hover > div[class*="absolute"] a[class*="bg-orange"],
+html.dark header div[class*="absolute"][role="menu"] a[class*="bg-orange"] {
+  color: #fdba74 !important; /* text-orange-300 */
+  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
+}
+
+/* === BOUTONS DROPDOWN - RETRAIT DU FOND === */
+
+/* Mode clair - boutons dropdown (liens avec chevron) */
+html:not(.dark) header button[aria-haspopup="true"] {
+  background-color: transparent !important; /* Hérite du fond de la navbar */
+  border: none !important;
+  color: #000000 !important; /* Texte noir comme demandé */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mode sombre - boutons dropdown (liens avec chevron) */
+html.dark header button[aria-haspopup="true"] {
+  background-color: transparent !important; /* Hérite du fond de la navbar */
+  border: none !important;
+  color: #ffffff !important; /* Texte blanc comme demandé */
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Effet hover des boutons dropdown - dégradé orange pour les deux modes */
+html:not(.dark) header button[aria-haspopup="true"]:hover,
+html.dark header button[aria-haspopup="true"]:hover {
+  background: linear-gradient(135deg, #FD9800, #ff6b35) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 0 4px rgba(253, 152, 0, 0.4)) !important;
+}
+
+/* État actif des boutons dropdown - mode clair */
+html:not(.dark) header button[aria-haspopup="true"][class*="text-orange"] {
+  color: #000000 !important; /* Texte noir normal, pas orange permanent */
+  background-color: transparent !important;
+}
+
+/* État actif des boutons dropdown - mode sombre */
+html.dark header button[aria-haspopup="true"][class*="text-orange"] {
+  color: #ffffff !important; /* Texte blanc normal, pas orange permanent */
+  background-color: transparent !important;
+}
+
+/* === FOOTER CONTACT LINKS - RETRAIT SOULIGNEMENT === */
+
+/* Mode clair - liens des cartes de contact sans soulignement */
+html:not(.dark) footer .bg-gray-800 a:hover,
+html:not(.dark) footer a[href^="tel:"]:hover,
+html:not(.dark) footer a[href^="mailto:"]:hover,
+html:not(.dark) footer a[href="#"]:hover {
+  text-decoration: none !important;
+  text-underline-offset: unset !important;
+  text-decoration-thickness: unset !important;
+}
+
+/* Mode sombre - liens des cartes de contact sans soulignement */
+html.dark footer .bg-gray-800 a:hover,
+html.dark footer a[href^="tel:"]:hover,
+html.dark footer a[href^="mailto:"]:hover,
+html.dark footer a[href="#"]:hover {
+  text-decoration: none !important;
+  text-underline-offset: unset !important;
+  text-decoration-thickness: unset !important;
+}
+
+/* === FOOTER COPYRIGHT & DESCRIPTIF - CORRECTION COULEUR === */
+
+/* Mode clair - texte descriptif sous "Suivez-moi" */
+html:not(.dark) footer p {
+  color: #1a1a1a !important; /* Même couleur que les autres paragraphes du footer */
+}
+
+/* Mode clair - copyright */
+html:not(.dark) footer .border-t p {
+  color: #1a1a1a !important; /* Même couleur que les autres paragraphes du footer */
+}
+
+/* Mode sombre - pas de changement (déjà correct) */
+html.dark footer p {
+  color: #f9fafb !important; /* Conservé tel quel */
+}
+
+html.dark footer .border-t p {
+  color: #f9fafb !important; /* Conservé tel quel */
 }

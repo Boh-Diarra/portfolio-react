@@ -38,7 +38,7 @@ const skills: Skill[] = [
     name: 'Next.js',
     level: 75,
     years: 2,
-    logo: <FaReact color="#000000" />,
+    logo: <Image src="/img/nextjs.svg" alt="Next.js" width={32} height={32} className="object-contain aspect-square mx-auto" />,
     description: "Framework React pour le développement d'applications web performantes, avec rendu côté serveur et génération statique.",
     category: 'frontend',
   },

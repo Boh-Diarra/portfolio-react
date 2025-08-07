@@ -12,21 +12,21 @@ const professionalExperience: TimelineItemProps[] = [
     date: 'Avril 2025 - Juin 2025',
     title: "Développement d'un site web corporate pour les Nouvelles Brasseries Bamakoises",
     subtitle: 'NBB-MALI',
-    description: `**Réalisations principales :**\n• Conception et développement d'un site web corporate moderne pour la brasserie\n• Création d'une section produits avec catalogue des différentes marques de boissons proposées par NBB-MALI et une page produit\n• Intégration d'une page actualités et événements de l'entreprise\n• Optimisation SEO et responsive design pour tous les appareils\n• Mise en place d'un formulaire de contact et d'informations commerciales\n• Intégration d'un chatbot IA pour la messagerie instantanée et le support client\n• Résultat : Amélioration de 70% de la visibilité en ligne et augmentation de 45% des demandes commerciales`,
+    description: `**Réalisations principales :**\n• Conception et développement d'un site web corporate moderne pour la brasserie\n• Création d'une section produits avec catalogue des différentes marques de boissons proposées par NBB-MALI et une page produit\n• Intégration d'une page actualités et événements de l'entreprise\n• Optimisation SEO et responsive design pour tous les appareils\n• Mise en place d'un formulaire de contact et d'informations commerciales\n• Intégration d'un chatbot IA pour la messagerie instantanée et le support client\n• Intégration complète de Google Analytics 4 pour le suivi des performances et l'analyse du comportement utilisateur\n• <span class="bonus-gradient">BONUS : Formation complète de l'équipe NBB-Mali</span> sur l'utilisation et l'administration du site (offert gratuitement)\n• Résultat : Amélioration de 70% de la visibilité en ligne et augmentation de 45% des demandes commerciales`,
     siteUrl: 'https://www.nbb-mali.com',
   },
   {
     date: 'Mai 2025 - Juin 2025',
-    title: 'Création du site pour un Institut de Formation Agropastoral',
+    title: 'Création d\'un site web pour un Institut de Formation Agropastoral ',
     subtitle: 'IFAK-SENOU',
-    description: `**Réalisations principales :**\n• Conception et développement d'un site web moderne pour l'institut de formation agropastorale\n• Création d'une page de présentation des formations et programmes d'études\n• Optimisation SEO et responsive design pour tous les appareils\n• Intégration d'un formulaire de contact et d'informations pratiques\n• Mise en place d'une galerie photos et vidéos des activités de l'institut\n• Intégration d'un chatbot IA pour la messagerie instantanée et l'assistance aux visiteurs\n• Résultat : Amélioration de 80% de la visibilité en ligne et augmentation de 60% des inscriptions`,
+    description: `**Réalisations principales :**\n• Conception et développement d'un site web moderne pour l'institut de formation agropastorale\n• Création d'une page de présentation des formations et programmes d'études\n• Optimisation SEO et responsive design pour tous les appareils\n• Intégration d'un formulaire de contact et d'informations pratiques\n• Mise en place d'une galerie photos et vidéos des activités de l'institut\n• Intégration d'un chatbot IA pour la messagerie instantanée et l'assistance aux visiteurs\n• Intégration de Google Analytics 4 pour analyser l'intérêt des formations agropastorales et optimiser les parcours d'inscription\n• Résultat : Amélioration de 80% de la visibilité en ligne et augmentation de 60% des inscriptions`,
     siteUrl: 'https://ifak-senou.com',
   },
   {
     date: 'Octobre 2023 - Maintenant',
     title: 'Site E-commerce',
     subtitle: 'Tech Sugu',
-    description: `**Réalisations principales :**\n• Conception et développement complet d'une plateforme e-commerce spécialisée dans les PC reconditionnés\n• Intégration de systèmes de paiement sécurisés et gestion des stocks en temps réel\n• Optimisation SEO et marketing digital : +150% de trafic organique en 6 mois\n• Gestion complète des opérations : marketing, service client, analytics\n• Résultat : +30% de ventes et satisfaction client de 98%`,
+    description: `**Réalisations principales :**\n• Conception et développement complet d'une plateforme e-commerce spécialisée dans les PC reconditionnés\n• Intégration de systèmes de paiement sécurisés et gestion des stocks en temps réel\n• Optimisation SEO et marketing digital : +70% de trafic organique en 6 mois\n• Gestion complète des opérations : marketing, service client, analytics\n• Résultat : +30% de ventes et satisfaction client de 98%`,
     siteUrl: 'https://techsugu.com',
   },
   {
@@ -47,14 +47,14 @@ const professionalExperience: TimelineItemProps[] = [
 const certifications: TimelineItemProps[] = [
   {
     date: 'Mai 2025 - Maintenant',
-    title: 'Certificat Professionnel Développeur Back-End Meta',
+    title: 'Meta Back-End Developer Professional Certificate',
     subtitle: 'Coursera - Meta',
     description: `**Compétences acquises :**\n• Maîtrise des langages de programmation backend (Python, Node.js, Django)\n• Développement d'APIs RESTful et GraphQL pour applications web\n• Gestion de bases de données (SQL, MySQL, NoSQL) et optimisation des performances\n• Sécurité des applications web et authentification utilisateur\n• Déploiement et maintenance d'applications sur serveurs cloud\nBénéfice : Capacité à développer des applications web complètes avec une architecture backend robuste et scalable`,
     credlyUrl: 'https://www.credly.com/badges/meta-backend-url',
   },
   {
     date: 'Novembre 2024 - Mai 2025',
-    title: 'Certificat Professionnel Développeur Front-End Meta',
+    title: 'Meta Front-End Developer Professional Certificate',
     subtitle: 'Coursera - Meta',
     description: `**Compétences acquises :**\n• Maîtrise complète de HTML5 sémantique et CSS3 avancé (Flexbox, Grid, animations)\n• Développement JavaScript moderne (ES6+, async/await, modules)\n• Création d'applications React.js avec hooks, context API et state management\n• Intégration d'APIs REST et gestion d'état avec Redux\n• Optimisation des performances et accessibilité web (WCAG)\n• Responsive design et Progressive Web Apps (PWA)\n• Tests unitaires et intégration continue\nBénéfice : Capacité à créer des interfaces utilisateur modernes, performantes et accessibles pour des applications web professionnelles`,
     credlyUrl: 'https://www.credly.com/badges/5b7a0e1a-af2c-4618-a087-3de9dabdb4cf/public_url',

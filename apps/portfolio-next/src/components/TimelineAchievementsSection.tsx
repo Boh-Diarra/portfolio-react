@@ -13,7 +13,7 @@ export const TimelineAchievementsSection: React.FC<TimelineAchievementsSectionPr
       {points.map((point, i) => (
         <div key={i} className="flex items-start gap-2">
           <span className="mt-1"><FaCheck color="#FD9800" size={20} /></span>
-          <span className="text-gray-700 dark:text-gray-300">{point}</span>
+          <span className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: point }}></span>
         </div>
       ))}
     </div>

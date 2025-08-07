@@ -14,13 +14,13 @@ export function SocialLinks({ links, variant = 'header', className = '' }: Socia
   const getVariantClasses = () => {
     switch (variant) {
       case 'header':
-        return 'icon-social text-xl hover:scale-110 transition-transform duration-300';
+        return 'icon-social text-xl hover:scale-110 transition-transform duration-300 text-gray-800 dark:text-gray-200';
       case 'footer':
-        return 'icon-social text-2xl p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110 shadow-lg';
+        return 'icon-social text-2xl p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-orange-500/50 text-white';
       case 'mobile':
-        return 'icon-social text-xl hover:scale-110 transition-transform duration-300';
+        return 'icon-social text-xl hover:scale-110 transition-transform duration-300 text-gray-800 dark:text-gray-200';
       default:
-        return 'icon-social text-xl hover:scale-110 transition-transform duration-300';
+        return 'icon-social text-xl hover:scale-110 transition-transform duration-300 text-gray-800 dark:text-gray-200';
     }
   };
 

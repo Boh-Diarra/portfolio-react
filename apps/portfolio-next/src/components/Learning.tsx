@@ -107,12 +107,12 @@ const Learning: React.FC = () => {
               className="group relative"
             >
               <div
-                className="bg-white dark:bg-[#23272f] border border-gray-200 dark:border-[#FD9800] rounded-xl p-8 transition-all duration-300 shadow-sm flex flex-col h-full"
+                className="bg-white dark:bg-[#23272f] border border-gray-200 dark:border-[#FD9800] rounded-xl p-8 transition-all duration-300 shadow-sm flex flex-col h-full hover:shadow-lg dark:hover:shadow-orange-500/20"
               >
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="text-4xl">{item.icon}</div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FD9800] transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FD9800] dark:group-hover:text-[#ff6b35] transition-colors mb-2">
                       {item.name}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">

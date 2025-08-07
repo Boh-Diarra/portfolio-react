@@ -82,6 +82,7 @@ const Skills: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
+                  {/* Section niveau et pourcentages commentée
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-700 dark:text-gray-300">Niveau</span>
                     <span className="text-[#FD9800] font-semibold">{skill.level}%</span>
@@ -96,6 +97,7 @@ const Skills: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
                     </motion.div>
                   </div>
+                  */}
                 </div>
               </div>
             </motion.div>
