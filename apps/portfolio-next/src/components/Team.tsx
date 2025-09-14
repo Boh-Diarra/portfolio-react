@@ -68,9 +68,9 @@ export default function Team() {
                 <Image
                   src={member.image}
                   alt={member.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full w-full h-full"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="rounded-full"
                 />
               </div>
               <div className="team-text">
@@ -107,4 +107,4 @@ export default function Team() {
       </div>
     </section>
   );
-} 
+}

@@ -80,50 +80,57 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="portfolio-item"
             >
-                <Tilt
-                  glareEnable={true}
-                  glareMaxOpacity={0.3}
-                  glareColor="#FD9800"
-                  glarePosition="all"
-                  scale={1.05}
-                  transitionSpeed={700}
-                  tiltMaxAngleX={12}
-                  tiltMaxAngleY={12}
-                  perspective={1200}
-                  gyroscope={true}
-                  className="group card-base card-orange-shadow glassmorphism hover:ring-1 hover:ring-[#FD9800] transition-all duration-300 rounded-lg shadow-lg p-4 sm:p-8 min-h-[320px] bg-white dark:bg-gray-800"
-                >
-                  <div className="relative h-48 sm:h-64 overflow-hidden rounded-lg shadow-lg w-full">
-                    <Image src={item.image} alt={item.title} layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110 w-full h-full" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
-                    <div className="absolute inset-0 pointer-events-none flex flex-col justify-center items-center">
-                      <div className="backdrop-blur-sm bg-black/60 rounded-xl px-4 py-3 sm:px-6 sm:py-4 opacity-0 group-hover:opacity-100 transition-all duration-400 pointer-events-auto flex flex-col items-center shadow-xl w-[90%] max-w-[95vw] sm:w-auto">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white text-center portfolio-title-force-white">
-                          {item.title}
-                        </h3>
-                      {item.link ? (
-                          <Link
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-2 font-semibold text-lg shadow-lg bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent hover:underline focus-visible:ring-2 focus-visible:ring-orange-400 rounded transition-all duration-300 text-center"
-                          >
-                          Voir le site
-                        </Link>
-                      ) : null}
-                        <button
-                          onClick={() => openLightbox(item.lightboxImage)}
-                          className="mt-4 w-full sm:w-auto btn-base bg-gradient-to-r from-[#FD9800] to-[#ff6b35] py-2 px-6 rounded-full shadow-xl text-white font-bold text-lg relative overflow-hidden hover:from-[#ff6b35] hover:to-[#FD9800] focus-visible:ring-2 focus-visible:ring-orange-400 transition-all duration-300"
+              <Tilt
+                glareEnable={true}
+                glareMaxOpacity={0.3}
+                glareColor="#FD9800"
+                glarePosition="all"
+                scale={1.05}
+                transitionSpeed={700}
+                tiltMaxAngleX={12}
+                tiltMaxAngleY={12}
+                perspective={1200}
+                gyroscope={true}
+                className="group card-base card-orange-shadow glassmorphism hover:ring-1 hover:ring-[#FD9800] transition-all duration-300 rounded-lg shadow-lg p-4 sm:p-8 min-h-[320px] bg-white dark:bg-gray-800"
+              >
+                <div className="relative h-48 sm:h-64 overflow-hidden rounded-lg shadow-lg w-full">
+                  <Image 
+                    src={item.image} 
+                    alt={item.title} 
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="transition-transform duration-500 group-hover:scale-110" 
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
+                  />
+                  <div className="absolute inset-0 pointer-events-none flex flex-col justify-center items-center">
+                    <div className="backdrop-blur-sm bg-black/60 rounded-xl px-4 py-3 sm:px-6 sm:py-4 opacity-0 group-hover:opacity-100 transition-all duration-400 pointer-events-auto flex flex-col items-center shadow-xl w-[90%] max-w-[95vw] sm:w-auto">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white text-center portfolio-title-force-white">
+                        {item.title}
+                      </h3>
+                    {item.link ? (
+                        <Link
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 font-semibold text-lg shadow-lg bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent hover:underline focus-visible:ring-2 focus-visible:ring-orange-400 rounded transition-all duration-300 text-center"
                         >
-                          <span className="relative z-10">Voir l'image</span>
-                          <span className="absolute inset-0 rounded-full opacity-0 group-active:opacity-30 bg-white animate-pulse"></span>
-                      </button>
-                      </div>
+                        Voir le site
+                      </Link>
+                    ) : null}
+                      <button
+                        onClick={() => openLightbox(item.lightboxImage)}
+                        className="mt-4 w-full sm:w-auto btn-base bg-gradient-to-r from-[#FD9800] to-[#ff6b35] py-2 px-6 rounded-full shadow-xl text-white font-bold text-lg relative overflow-hidden hover:from-[#ff6b35] hover:to-[#FD9800] focus-visible:ring-2 focus-visible:ring-orange-400 transition-all duration-300"
+                      >
+                        <span className="relative z-10">Voir l'image</span>
+                        <span className="absolute inset-0 rounded-full opacity-0 group-active:opacity-30 bg-white animate-pulse"></span>
+                    </button>
                     </div>
                   </div>
-                </Tilt>
-              </motion.div>
-            ))}
-          </div>
+                </div>
+              </Tilt>
+            </motion.div>
+          ))}
+        </div>
       </div>
       <Lightbox
         open={open}
@@ -132,4 +139,4 @@ export default function Portfolio() {
       />
     </section>
   );
-} 
+}

@@ -46,15 +46,22 @@ const professionalExperience: TimelineItemProps[] = [
 
 const certifications: TimelineItemProps[] = [
   {
-    date: 'Mai 2025 - Maintenant',
-    title: 'Meta Back-End Developer Professional Certificate',
+    date: 'Novembre 2024 - Août 2025',
+    title: 'Meta Full-Stack Developer Certificate',
+    subtitle: 'Coursera - Meta',
+    description: `**Compétences acquises :**\n• Maîtrise complète du développement full-stack avec React.js et Node.js\n• Développement d'applications web complètes (frontend + backend + base de données)\n• Création d'APIs RESTful et GraphQL pour applications web modernes\n• Gestion de bases de données (SQL, MySQL, MongoDB) et optimisation des performances\n• Intégration de systèmes de paiement et authentification utilisateur\n• Déploiement et maintenance d'applications sur serveurs cloud (AWS, Vercel)\n• Tests unitaires, intégration continue et DevOps\n• Sécurité des applications web et bonnes pratiques de développement\nBénéfice : Capacité à développer des applications web complètes de A à Z, de la conception à la mise en production, avec une expertise technique solide en développement full-stack`,
+    credlyUrl: 'https://www.credly.com/badges/meta-full-stack-developer/public_url', // URL à mettre à jour quand disponible
+  },
+  {
+    date: 'Mai 2025 - Septembre 2025',
+    title: 'Meta Back-End Developer Certificate',
     subtitle: 'Coursera - Meta',
     description: `**Compétences acquises :**\n• Maîtrise des langages de programmation backend (Python, Node.js, Django)\n• Développement d'APIs RESTful et GraphQL pour applications web\n• Gestion de bases de données (SQL, MySQL, NoSQL) et optimisation des performances\n• Sécurité des applications web et authentification utilisateur\n• Déploiement et maintenance d'applications sur serveurs cloud\nBénéfice : Capacité à développer des applications web complètes avec une architecture backend robuste et scalable`,
-    credlyUrl: 'https://www.credly.com/badges/meta-backend-url',
+    credlyUrl: 'https://www.credly.com/badges/3fe90606-0881-4c5e-bb8a-be640cb67827/public_url',
   },
   {
     date: 'Novembre 2024 - Mai 2025',
-    title: 'Meta Front-End Developer Professional Certificate',
+    title: 'Meta Front-End Developer Certificate',
     subtitle: 'Coursera - Meta',
     description: `**Compétences acquises :**\n• Maîtrise complète de HTML5 sémantique et CSS3 avancé (Flexbox, Grid, animations)\n• Développement JavaScript moderne (ES6+, async/await, modules)\n• Création d'applications React.js avec hooks, context API et state management\n• Intégration d'APIs REST et gestion d'état avec Redux\n• Optimisation des performances et accessibilité web (WCAG)\n• Responsive design et Progressive Web Apps (PWA)\n• Tests unitaires et intégration continue\nBénéfice : Capacité à créer des interfaces utilisateur modernes, performantes et accessibles pour des applications web professionnelles`,
     credlyUrl: 'https://www.credly.com/badges/5b7a0e1a-af2c-4618-a087-3de9dabdb4cf/public_url',
@@ -108,4 +115,4 @@ export default function Experience() {
       />
     </section>
   );
-} 
+}

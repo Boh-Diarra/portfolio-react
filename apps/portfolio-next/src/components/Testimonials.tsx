@@ -75,8 +75,8 @@ export default function Testimonials() {
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-full"
                   />
                 </div>
@@ -97,4 +97,4 @@ export default function Testimonials() {
       </div>
     </section>
   );
-} 
+}
