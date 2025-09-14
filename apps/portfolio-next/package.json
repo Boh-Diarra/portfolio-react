@@ -10,6 +10,7 @@
     "analyze": "ANALYZE=true next build",
     "export": "next build && next export",
     "amplify-build": "next build",
+    "amplify-export": "next build && next export",
     "amplify-post-build": "echo 'Build completed successfully'"
   },
   "dependencies": {
