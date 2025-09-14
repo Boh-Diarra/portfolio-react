@@ -5,9 +5,7 @@ import { useTheme } from 'next-themes';
 import Learning from '@/components/Learning';
 import Image from 'next/image';
 import { FaJs, FaReact, FaNode, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaDatabase, FaWordpress, FaWindows, FaLinux, FaUserShield, FaTerminal,FaCloud, FaBootstrap, FaWix, FaShopify } from 'react-icons/fa6';
-import { SkillCard } from './SkillCard';
 import { SkillCategorySection } from './SkillCategorySection';
-
 export interface Skill {
   name: string;
   level: number;

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import TiltOrig from 'react-parallax-tilt';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

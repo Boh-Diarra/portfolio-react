@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { FaChevronDown } from 'react-icons/fa6';
 import type { NavLink } from '../hooks/useActiveNav';
+import type { SocialLink } from '../config/socialLinks';
 import ThemeToggle from './ThemeToggle';
 import { SocialLinks } from './SocialLinks';
-// import { socialLinks } from '../config/socialLinks'; // SUPPRIMER CETTE LIGNE
 
 interface MobileNavProps {
   navLinks: NavLink[];
@@ -16,7 +16,7 @@ interface MobileNavProps {
   setActiveDropdown: (label: string | null) => void;
   toggleDropdown: (label: string | null) => void;
   closeMenu: () => void;
-  socialLinks: any;
+  socialLinks: SocialLink[];
 }
 
 export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, activeDropdown, setActiveDropdown, toggleDropdown, closeMenu, socialLinks }: MobileNavProps) {

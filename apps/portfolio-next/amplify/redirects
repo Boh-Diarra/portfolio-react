@@ -1,0 +1,15 @@
+# Redirections pour AWS Amplify
+# Format: source destination [status] [country] [state] [city]
+
+# Redirections principales
+/home / 301
+/portfolio /#portfolio 302
+/contact /#contact 302
+
+# Redirections pour les anciennes URLs
+/accueil / 301
+/projets /#portfolio 302
+/competences /#competences 302
+/experiences /#experiences 302
+/temoignages /#temoignages 302
+/equipe /#equipe 302

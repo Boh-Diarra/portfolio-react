@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import type { Skill } from './CompetencesClient';
-import { SkillProgressBar } from './SkillProgressBar';
 
 interface SkillCardProps {
   skill: Skill;
   index: number;
-  cardVariants: any;
+  cardVariants: Variants;
 }
 
 export const SkillCard: React.FC<SkillCardProps> = ({ skill, index, cardVariants }) => (

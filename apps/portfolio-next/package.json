@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "amplify-build": "next build",
+    "amplify-post-build": "echo 'Build completed successfully'"
   },
   "dependencies": {
     "clsx": "^2.1.1",

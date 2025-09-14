@@ -13,6 +13,20 @@ const nextConfig: NextConfig = {
   basePath: '',
   trailingSlash: false,
   
+  // Configuration spécifique pour AWS Amplify
+  output: 'standalone', // Pour une meilleure performance sur Amplify
+  
+  // Variables d'environnement
+  env: {
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://votre-domaine.amplifyapp.com',
+  },
+  
+  // Optimisation pour le déploiement
+  generateEtags: true,
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
+  
   // Headers de sécurité et performance
   async headers() {
     return [

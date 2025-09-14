@@ -1,0 +1,24 @@
+{
+  "projectName": "portfolio-next",
+  "defaultEditor": "code",
+  "frontend": {
+    "framework": "nextjs",
+    "config": {
+      "SourceDir": ".",
+      "DistributionDir": ".next",
+      "BuildCommand": "npm run amplify-build",
+      "StartCommand": "npm run start"
+    }
+  },
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-portfolio-next-authRole",
+      "UnauthRoleName": "amplify-portfolio-next-unauthRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-portfolio-next-deployment",
+      "UnauthRoleName": "amplify-portfolio-next-unauthRole",
+      "StackName": "amplify-portfolio-next",
+      "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/amplify-portfolio-next/12345678-1234-1234-1234-123456789012"
+    }
+  }
+}

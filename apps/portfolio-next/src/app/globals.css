@@ -254,13 +254,13 @@ header {
 
 /* Mode clair - menu mobile avec fond blanc légèrement transparent */
 html:not(.dark) .mobile-menu {
-  background-color: rgba(255, 255, 255, 0.70) !important;
+  background-color: rgba(255, 255, 255, 0.90) !important;
   border-bottom-color: #e5e7eb !important;
 }
 
 /* Mode sombre - menu mobile */
 html.dark .mobile-menu {
-  background-color: rgba(17, 24, 39, 0.70) !important;
+  background-color: rgba(17, 24, 39, 0.90) !important;
   border-bottom-color: rgba(55, 65, 81, 0.5) !important;
 }
 

@@ -12,7 +12,7 @@ interface DesktopNavProps {
   toggleDropdown: (label: string | null) => void;
 }
 
-export function DesktopNav({ navLinks, isActive, activeSection, activeDropdown, setActiveDropdown, toggleDropdown }: DesktopNavProps) {
+export function DesktopNav({ navLinks, isActive, activeDropdown, setActiveDropdown, toggleDropdown }: DesktopNavProps) {
   // Pour focus clavier sur le premier lien du sous-menu
   const dropdownRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
