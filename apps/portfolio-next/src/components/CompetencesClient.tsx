@@ -65,7 +65,7 @@ const skills: Skill[] = [
     category: 'backend',
   },
   {
-    name: 'HTML & CSS',
+    name: 'HTML5 & CSS3',
     level: 90,
     years: 5,
     logo: <><FaHtml5 color="#E34F26" /> <FaCss3Alt color="#1572B6" /></>,
@@ -132,7 +132,7 @@ const skills: Skill[] = [
     name: 'Wix',
     level: 90,
     years: 2,
-    logo: <FaWix color="#FAAD4D" />,
+    logo: <FaWix color="#3899EC" />,
     description: "Plateforme de création de sites web par glisser-déposer, idéale pour les projets rapides et sans code.",
     category: 'cms',
   },

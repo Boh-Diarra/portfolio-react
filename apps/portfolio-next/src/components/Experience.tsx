@@ -50,7 +50,7 @@ const certifications: TimelineItemProps[] = [
     title: 'Meta Full-Stack Developer Certificate',
     subtitle: 'Coursera - Meta',
     description: `**Compétences acquises :**\n• Maîtrise complète du développement full-stack avec React.js et Node.js\n• Développement d'applications web complètes (frontend + backend + base de données)\n• Création d'APIs RESTful et GraphQL pour applications web modernes\n• Gestion de bases de données (SQL, MySQL, MongoDB) et optimisation des performances\n• Intégration de systèmes de paiement et authentification utilisateur\n• Déploiement et maintenance d'applications sur serveurs cloud (AWS, Vercel)\n• Tests unitaires, intégration continue et DevOps\n• Sécurité des applications web et bonnes pratiques de développement\nBénéfice : Capacité à développer des applications web complètes de A à Z, de la conception à la mise en production, avec une expertise technique solide en développement full-stack`,
-    credlyUrl: 'https://www.credly.com/badges/meta-full-stack-developer/public_url', // URL à mettre à jour quand disponible
+    credlyUrl: 'https://www.credly.com/users/boh-diarra', // URL à mettre à jour quand disponible
   },
   {
     date: 'Mai 2025 - Septembre 2025',
