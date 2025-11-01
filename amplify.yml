@@ -1,24 +1,19 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - echo "Installing dependencies..."
-        - cd apps/portfolio-next
-        - npm ci
-        - echo "Dependencies installed successfully"
-    build:
-      commands:
-        - echo "Building the application..."
-        - cd apps/portfolio-next
-        - npm run build
-        - echo "Build completed successfully"
-  artifacts:
-    baseDirectory: apps/portfolio-next/.next
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - apps/portfolio-next/node_modules/**/*
-      - apps/portfolio-next/.next/cache/**/*
-      - apps/portfolio-next/.next/static/**/*
+applications:
+  - appRoot: apps/portfolio-next
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd apps/portfolio-next
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: apps/portfolio-next/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - apps/portfolio-next/node_modules/**/*
