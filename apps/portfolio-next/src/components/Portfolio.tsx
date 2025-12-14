@@ -13,6 +13,7 @@ import React from 'react';
 const Tilt = TiltOrig as unknown as React.FC<React.ComponentProps<any>>;
 
 const portfolioItems = [
+  { category: 'Sites Web', title: 'Timaro Conseil', image: '/img/portfolio_5.webp', lightboxImage: '/img/portfolio_5.webp', link: 'https://www.timaroconseil.com/' },
   { category: 'Sites Web', title: 'Nbb-Mali', image: '/img/maquette_nbb.webp', lightboxImage: '/img/maquette_nbb.webp', link: 'https://www.nbb-mali.com/' },
   { category: 'Sites Web', title: 'Ifak-Senou', image: '/img/maquette_ifak.webp', lightboxImage: '/img/maquette_ifak.webp', link: 'https://www.ifak-senou.com/' },
   { category: 'Sites Web', title: 'TechSugu', image: '/img/portfolio_0.webp', lightboxImage: '/img/portfolio_0.webp', link: 'https://techsugu.com/' },
@@ -22,8 +23,9 @@ const portfolioItems = [
   { category: 'Sites Web', title: 'AfroCuisine', image: '/img/portfolio_3.webp', lightboxImage: '/img/portfolio_3.webp', link: 'https://www.afrocuisinemagazine.com/' },
   { category: 'Applications Mobiles', title: 'Clone Instagram', image: '/img/mobile_5.webp', lightboxImage: '/img/mobile_5.webp' },
   { category: 'Applications Mobiles', title: 'Fruit Store', image: '/img/mobile_4.webp', lightboxImage: '/img/mobile_4.webp' },
-  { category: 'Gestion de Communauté', title: 'Page Techsugu', image: '/img/portfolio_rs_1.webp', lightboxImage: '/img/portfolio_rs_1.webp' },
+  { category: 'Gestion de Communauté', title: 'Page SHARP', image: '/img/portfolio_rs_1.webp', lightboxImage: '/img/portfolio_rs_1.webp' },
   { category: 'Gestion de Communauté', title: 'Page Akxa Digital', image: '/img/portfolio_rs_2.webp', lightboxImage: '/img/portfolio_rs_2.webp' },
+  { category: 'Gestion de Communauté', title: 'Page Djoliba', image: '/img/portfolio_rs_3.webp', lightboxImage: '/img/portfolio_rs_3.webp' },
 ];
 
 const filters = ['Tout', 'Sites Web', 'Applications Mobiles', 'Gestion de Communauté'];

@@ -101,9 +101,41 @@ export default function About() {
         {/* Why me section */}
         <div className="mt-20 text-center bg-gradient-to-r from-orange-400 to-orange-600 text-white p-6 sm:p-12 rounded-lg shadow-2xl">
             <h3 className="fade-in-start text-xl sm:text-2xl md:text-3xl font-bold">Pourquoi me choisir ?</h3>
-            <p className="fade-in-start mt-4 max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-orange-100 leading-relaxed">
-                Parce que votre projet mérite une approche sur mesure. Développeur web et mobile, spécialiste IT Support avec plus de 5 ans d'expérience, j'étends mes compétences au community management pour vous accompagner dans tous vos besoins digitaux avec une vision cohérente et des résultats mesurables.
+            <p className="fade-in-start mt-4 max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-orange-100 leading-relaxed font-semibold">
+                Pour bâtir un écosystème digital complet, sans friction. Je ne me contente pas de créer votre outil ; je lui donne vie et je garantis sa performance.
             </p>
+            
+            {/* Services cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+                <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <h4 className="font-bold text-lg mb-2 text-white">Développement</h4>
+                    <p className="text-orange-100 text-sm leading-relaxed">
+                        Je conçois et bâtis votre plateforme (web ou mobile), en créant une solution technique robuste et parfaitement adaptée à vos ambitions.
+                    </p>
+                </div>
+                
+                <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <h4 className="font-bold text-lg mb-2 text-white">Engagement</h4>
+                    <p className="text-orange-100 text-sm leading-relaxed">
+                        Je connecte votre projet à votre public cible, en créant l'engagement nécessaire pour générer des résultats visibles et concrets.
+                    </p>
+                </div>
+                
+                <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <h4 className="font-bold text-lg mb-2 text-white">Performance</h4>
+                    <p className="text-orange-100 text-sm leading-relaxed">
+                        Je veille à ce que l'ensemble de votre infrastructure reste performante, sécurisée et fiable au quotidien, pour que votre activité ne s'arrête jamais.
+                    </p>
+                </div>
+            </div>
+
+            {/* Final advantage */}
+            <div className="fade-in-start mt-8 max-w-3xl mx-auto">
+                <p className="text-orange-50 font-semibold text-base sm:text-lg md:text-xl leading-relaxed">
+                    Votre avantage : <span className="text-white">Un seul partenaire stratégique qui pilote votre projet de la première ligne de code jusqu'au client final, assurant une cohérence totale et une performance mesurable.</span>
+                </p>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-8">
                 {stats.map(stat => (
                     <div key={stat.label} className="fade-in-start">

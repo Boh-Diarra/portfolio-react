@@ -43,13 +43,13 @@ const services = [
   },
   {
     icon: <FaUsers size={48} color="#FD9800" />,
-    title: 'Community Management',
-    description: "Je développe votre présence en ligne grâce à la création de contenus engageants et à l'animation de vos réseaux sociaux, pour fédérer et dynamiser votre communauté.",
+    title: 'Social Media Manager',
+    description: "Je pilote votre présence sur les réseaux sociaux avec des contenus stratégiques et engageants. Animation quotidienne, création visuelle et analyse data pour convertir votre audience en résultats concrets.",
     features: [
-      'Stratégie éditoriale',
-      'Création de visuels et vidéos',
-      'Animation et modération',
-      'Analyse des performances',
+      'Stratégie de contenu adaptée',
+      'Création de visuels et design graphique',
+      'Publication et animation quotidienne',
+      'Suivi analytics et ROI',
     ],
   },
 ];
@@ -69,8 +69,8 @@ export default function Services() {
         return emailTemplates.mobileDevelopment.subject;
       case 'Support IT & Maintenance':
         return emailTemplates.itSupport.subject;
-      case 'Community Management':
-        return emailTemplates.communityManagement.subject;
+      case 'Social Media Manager':
+        return emailTemplates.socialMediaManager.subject;
       default:
         return 'Devis Service Digital';
     }
@@ -84,8 +84,8 @@ export default function Services() {
         return emailTemplates.mobileDevelopment.body;
       case 'Support IT & Maintenance':
         return emailTemplates.itSupport.body;
-      case 'Community Management':
-        return emailTemplates.communityManagement.body;
+      case 'Social Media Manager':
+        return emailTemplates.socialMediaManager.body;
       default:
         return emailTemplates.contact.body;
     }
@@ -99,7 +99,7 @@ export default function Services() {
         return 'Demander un devis gratuit';
       case 'Support IT & Maintenance':
         return 'Demander un devis gratuit';
-      case 'Community Management':
+      case 'Social Media Manager':
         return 'Demander un devis gratuit';
       default:
         return 'Demander un devis gratuit';

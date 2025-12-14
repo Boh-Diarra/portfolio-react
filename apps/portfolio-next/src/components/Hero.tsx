@@ -35,12 +35,12 @@ export default function Hero() {
             <div className="md:w-1/2 lg:w-2/3 text-center md:text-left">
               <div id="hero-content" className="hero-content">
                 <h1 className="fade-in-start text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-2 sm:mb-4 leading-tight">
-                  Transformez vos idées en expériences numériques exceptionnelles
+                  Transformons vos concepts en solutions numériques scalables pour propulser votre croissance.
                 </h1>
                 <p className="fade-in-start text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-1 sm:mb-2 leading-relaxed">Bonjour ! Je suis DIARRA Boh</p>
                 <div className="fade-in-start text-base sm:text-lg md:text-xl lg:text-2xl font-bold h-6 sm:h-12 md:h-16 lg:h-auto">
                   <span className="inline-block bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">
-                    Développeur Web
+                    Full-Stack Developer
                   </span>
                 </div>
               </div>
@@ -61,19 +61,17 @@ export default function Hero() {
           <div className="md:w-1/2 lg:w-2/3 text-center md:text-left">
             <div id="hero-content" className="hero-content">
               <h1 className="fade-in-start text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-2 sm:mb-4 leading-tight">
-                Transformez vos idées en expériences numériques exceptionnelles
+              Transformons vos concepts en solutions numériques scalables pour propulser votre croissance.
               </h1>
               <p className="fade-in-start text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-1 sm:mb-2 leading-relaxed">Bonjour ! Je suis DIARRA Boh</p>
               <div className="fade-in-start text-base sm:text-lg md:text-xl lg:text-2xl font-bold h-6 sm:h-12 md:h-16 lg:h-auto">
                   <TypeAnimation
                     sequence={[
-                      'Développeur Web',
+                      'Full-Stack Developer',
                     1500,
-                      'Développeur Mobile',
+                      'Social Media Manager',
                     1500,
-                      'Community Manager',
-                    1500,
-                    'Spécialiste IT Support',
+                    'Spécialist IT Support',
                     1500,
                     ]}
                     wrapper="span"
@@ -107,14 +105,14 @@ export default function Hero() {
               <div className="relative flex items-end justify-center">
                 {/* Bordure extérieure inférieure gradient orange */}
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[300px] md:h-7 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-b-3xl shadow-lg z-0"></div>
-                <div className="relative overflow-hidden rounded-3xl shadow-3xl ring-4 ring-white dark:ring-gray-900 w-[200px] h-[260px] sm:w-[240px] sm:h-[300px] md:w-[280px] md:h-[340px] z-10 flex items-end justify-center">
+                <div className="relative overflow-hidden rounded-3xl shadow-3xl ring-4 ring-white dark:ring-gray-900 w-[220px] h-[320px] sm:w-[260px] sm:h-[380px] md:w-[300px] md:h-[420px] z-10 flex items-end justify-center">
               <Image
-                    src="/img/Profil.webp"
+                    src="/img/Profil2.webp"
                 alt="Diarra Boh"
                     fill
-                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
                     className="w-full h-full"
-                    sizes="(max-width: 640px) 180px, (max-width: 768px) 250px, 350px"
+                    sizes="(max-width: 640px) 220px, (max-width: 768px) 260px, 300px"
                     priority
                   />
                 </div>

@@ -16,14 +16,14 @@ const learningItems: LearningItem[] = [
   {
     name: 'AWS Cloud Technical Essentials',
     description: "Découverte des fondamentaux du cloud AWS : services, déploiement, sécurité et gestion d'infrastructure.",
-    progress: 60,
+    progress: 70,
     icon: <FaAws color="#FF9900" />,
     status: 'learning',
   },
   {
     name: 'Meta Social Media Marketing',
     description: "Formation sur les stratégies de marketing digital et l'utilisation professionnelle des réseaux sociaux (Meta, Facebook, Instagram).",
-    progress: 50,
+    progress: 100,
     icon: <FaBullhorn color="#4267B2" />,
     status: 'exploring',
   },

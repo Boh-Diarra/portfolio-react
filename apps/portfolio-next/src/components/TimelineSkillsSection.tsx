@@ -13,14 +13,14 @@ export const TimelineSkillsSection: React.FC<TimelineSkillsSectionProps> = ({ po
       {points.map((point, i) => (
         <div key={i} className="flex items-start gap-2">
           <span className="mt-1"><FaAngleRight color="#FD9800" /></span>
-          <span className="text-gray-700 dark:text-gray-300">{point}</span>
+          <span className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: point }}></span>
         </div>
       ))}
     </div>
     {benefit && (
       <div className="mt-2">
         <strong className="text-gray-800 dark:text-gray-100">Bénéfice :</strong>
-        <span className="text-gray-700 dark:text-gray-300"> {benefit}</span>
+        <span className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: ` ${benefit}` }}></span>
       </div>
     )}
   </div>

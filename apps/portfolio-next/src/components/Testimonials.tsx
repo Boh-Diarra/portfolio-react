@@ -14,10 +14,16 @@ const Tilt = TiltOrig as unknown as React.FC<React.ComponentProps<any>>;
 
 const testimonials = [
   {
+    image: '/img/testimonial-4.webp',
+    text: "Je suis très satisfait du travail de Boh. Il a réalisé la refonte de la page vitrine de mon site avec beaucoup de professionnalisme et de créativité. Il a pris le temps de comprendre mon contexte, m'a fait de très bonnes suggestions et a su apporter des idées pertinentes. Le résultat est vraiment à la hauteur. Un vrai pro, que je recommande à 100 % !",
+    name: 'Madani Diakite',
+    title: 'Talent Acquisition Specialist | Recruiter | Chasseur de têtes',
+  },
+  {
     image: '/img/team-4.webp',
     text: "Boh a créé mon portfolio personnel avec un résultat au-delà de mes attentes. Grâce à son expertise, j'ai pu valoriser mes compétences en ligne et recevoir de nouvelles opportunités professionnelles. Je suis grandement satisfait de la qualité et du professionnalisme apportés à ce projet !",
     name: 'COULIBALY Oumar',
-    title: 'Consultant en Communication Digitale & Personal Branding',
+    title: 'Consultant en Communication & Marketing | Personal Branding',
   },
   {
     image: '/img/testimonial-1.webp',

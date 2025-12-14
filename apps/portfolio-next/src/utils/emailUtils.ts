@@ -74,13 +74,13 @@ Pouvez-vous me contacter pour discuter de mes besoins et obtenir un devis person
 Merci !`
   },
   
-  communityManagement: {
-    subject: 'Devis Community Management',
+  socialMediaManager: {
+    subject: 'Devis Social Media Manager',
     body: `Bonjour Boh,
 
-Je suis intéressé par votre service de community management.
+Je suis intéressé(e) par votre service de Social Media Manager.
 
-Pouvez-vous me contacter pour discuter de mon projet et obtenir un devis personnalisé ?
+Pouvez-vous me contacter pour discuter de ma stratégie de contenu et obtenir un devis personnalisé ?
 
 Merci !`
   },

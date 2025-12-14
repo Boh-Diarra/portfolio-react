@@ -18,7 +18,9 @@ export const TimelineAchievementsSection: React.FC<TimelineAchievementsSectionPr
       ))}
     </div>
     {result && (
-      <div className="mt-2"><strong className="text-gray-800 dark:text-gray-100">{result}</strong></div>
+      <div className="mt-2">
+        <strong className="text-gray-800 dark:text-gray-100" dangerouslySetInnerHTML={{ __html: result }}></strong>
+      </div>
     )}
   </div>
 ); 
