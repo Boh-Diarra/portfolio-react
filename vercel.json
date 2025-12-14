@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "rootDirectory": "apps/portfolio-next",
+  "buildCommand": "cd ../.. && npm install && cd apps/portfolio-next && npm install && npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "cd ../.. && npm install && cd apps/portfolio-next && npm install",
+  "framework": "nextjs"
+}

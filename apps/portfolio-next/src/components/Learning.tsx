@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAws, FaBrain, FaCloud, FaBullhorn } from 'react-icons/fa6';
+import { FaAws, FaBrain, FaBullhorn } from 'react-icons/fa6';
 
 interface LearningItem {
   name: string;

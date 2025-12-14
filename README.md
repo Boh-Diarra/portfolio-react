@@ -10,9 +10,6 @@ Ce monorepo contient mon portfolio personnel développé avec les technologies m
 Portfolio-react/
 ├── apps/
 │   └── portfolio-next/          # Application Next.js principale
-├── packages/
-│   └── portfolio-legacy/        # Version legacy du portfolio
-└── new-portfolio/              # Nouvelle version en développement
 ```
 
 ## 🚀 Technologies Utilisées
@@ -100,9 +97,6 @@ npm run export
 
 ### Apps
 - **portfolio-next** : Application principale Next.js avec toutes les fonctionnalités modernes
-
-### Packages
-- **portfolio-legacy** : Version legacy du portfolio (HTML/CSS/JS)
 
 ### Composants Principaux
 - `Header.tsx` - Navigation et header
