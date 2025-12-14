@@ -84,6 +84,13 @@ const nextConfig: NextConfig = {
       };
     }
     
+    // Configuration pour ignorer les erreurs Tailwind CSS v4 non bloquantes
+    config.ignoreWarnings = [
+      ...(config.ignoreWarnings || []),
+      /Cannot apply unknown utility class/,
+      /Are you using CSS modules or similar and missing @reference/,
+    ];
+    
     return config;
   },
   
