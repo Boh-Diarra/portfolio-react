@@ -7,10 +7,11 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    --tw-ring-color: #f97316;
   }
   
   .btn-base:hover {
-    background-color: #ea580c;
+    background-color: #ea580c; /* orange-600 */
     color: white;
   }
   
@@ -21,38 +22,40 @@
   .btn-base:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316; /* ring-orange-500 */
   }
   .card-base {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    --tw-ring-color: #f97316;
   }
   
   .card-base:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.25rem); /* -translate-y-1 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
   }
   
   .card-base:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316; /* ring-orange-500 */
   }
   .icon-social {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    --tw-ring-color: #f97316;
   }
   
   .icon-social:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* scale-110 */
   }
   
   .icon-social:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f97316; /* ring-orange-500 */
   }
   
   /* Effet hover simple pour les icônes sociales - sans gradient */
@@ -97,7 +100,7 @@
   }
   .fade-in-start {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(1rem); /* translate-y-4 */
   }
   
   /* Ombre orange bien visible au repos et très marquée à l'appui */
@@ -113,32 +116,32 @@
     transform: scale(0.97);
   }
   .card-base.card-orange-shadow:hover, .card-orange-shadow:hover {
-    box-shadow: 0 0 0 1px #FD9800, 0 2px 12px 0 #ff730033, 0 4px 24px 0 #ff730022;
+    box-shadow: 0 0 0 1px #FD9800, 0 2px 12px 0 #ff730033, 0 4px 24px 0 #ff730022; /* ring-1 ring-[#FD9800] */
   }
   .subtitle-gradient {
-    font-size: 1.125rem;
+    font-size: 1.125rem; /* text-lg */
     line-height: 1.75rem;
-    font-weight: 600;
+    font-weight: 600; /* font-semibold */
     color: white;
     background: linear-gradient(to right, #FD9800, #ff6b35);
-    width: fit-content;
-    margin-left: auto;
+    width: fit-content; /* w-fit */
+    margin-left: auto; /* mx-auto */
     margin-right: auto;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.75rem; /* px-3 py-1 */
+    border-radius: 9999px; /* rounded-full */
+    margin-bottom: 0.5rem; /* mb-2 */
   }
   .glassmorphism {
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.6); /* bg-white/60 */
+    backdrop-filter: blur(12px); /* backdrop-blur-md */
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* border border-white/30 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
   }
   
   html.dark .glassmorphism {
-    background-color: rgba(17, 24, 39, 0.6);
-    border-color: rgba(55, 65, 81, 0.4);
+    background-color: rgba(17, 24, 39, 0.6); /* dark:bg-gray-900/60 */
+    border-color: rgba(55, 65, 81, 0.4); /* dark:border-gray-700/40 */
   }
   .bonus-gradient {
     background: linear-gradient(135deg, #ff6b35, #cc4a1b);
