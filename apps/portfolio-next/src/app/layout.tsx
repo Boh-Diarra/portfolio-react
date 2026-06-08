@@ -1,35 +1,37 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "../styles/components.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from '@/components/ThemeProvider';
+import FeedbackWidget from "@/components/FeedbackWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Boh DIARRA - Développeur Web & Mobile | Portfolio",
-  description: "Portfolio professionnel de Boh DIARRA, développeur web et mobile spécialisé en React, Next.js, et applications mobiles. Découvrez mes projets et compétences.",
-  keywords: ["Boh DIARRA", "Développeur Web", "Développeur Mobile", "React", "Next.js", "Portfolio", "Bamako", "Mali"],
+  title: "Développeur Fullstack & WordPress · Marketing Digital | Portfolio",
+  description: "Portfolio de Boh DIARRA, développeur fullstack & WordPress et responsable marketing digital à Bamako. Sites web, applications mobiles et marketing digital pour faire grandir votre activité.",
+  keywords: ["Boh DIARRA", "Développeur Fullstack", "Développeur Web", "Développeur Mobile", "WordPress", "Marketing Digital", "React", "Next.js", "Portfolio", "Bamako", "Mali"],
   authors: [{ name: "Boh DIARRA" }],
   creator: "Boh DIARRA",
   publisher: "Boh DIARRA",
   robots: "index, follow",
   openGraph: {
-    title: "Boh DIARRA - Développeur Web & Mobile",
-    description: "Portfolio professionnel de Boh DIARRA, développeur web et mobile",
-    url: "https://boh-diarra.vercel.app",
+    title: "Boh DIARRA - Développeur fullstack & responsable marketing digital",
+    description: "Développeur fullstack & WordPress et responsable marketing digital, sites web, applications web & mobiles et marketing digital.",
+    url: "https://bohdiarra.vercel.app",
     siteName: "Portfolio Boh DIARRA",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Boh DIARRA - Développeur Web & Mobile",
-    description: "Portfolio professionnel de Boh DIARRA",
+    title: "Boh DIARRA - Développeur fullstack",
+    description: "Développeur fullstack & WordPress et responsable marketing digital à Bamako.",
   },
   alternates: {
-    canonical: "https://boh-diarra.vercel.app",
+    canonical: "https://bohdiarra.vercel.app",
   },
 };
 
@@ -50,7 +52,9 @@ export default function RootLayout({
         >
         <Header />
         <main>{children}</main>
+        <FeedbackWidget />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

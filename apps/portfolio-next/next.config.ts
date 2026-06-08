@@ -13,12 +13,11 @@ const nextConfig: NextConfig = {
   basePath: '',
   trailingSlash: false,
   
-  // Configuration spécifique pour AWS Amplify
-  output: 'standalone', // Pour une meilleure performance sur Amplify
+  // (Vercel gère Next.js nativement — pas de output 'standalone', qui était prévu pour Amplify)
   
   // Variables d'environnement
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://votre-domaine.amplifyapp.com',
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://bohdiarra.vercel.app',
   },
   
   // Optimisation pour le déploiement
@@ -52,6 +51,10 @@ const nextConfig: NextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
           },
         ],
       },

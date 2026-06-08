@@ -78,9 +78,9 @@ Cordialement,`,
 
     switch (variant) {
       case 'primary':
-        return `${baseClasses} bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white hover:from-[#ff6b35] hover:to-[#FD9800]`;
+        return `${baseClasses} bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white hover:from-[#C2410C] hover:to-[#E8732A]`;
       case 'secondary':
-        return `${baseClasses} border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-[#FD9800] hover:to-[#ff6b35] hover:text-white`;
+        return `${baseClasses} border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-[#E8732A] hover:to-[#C2410C] hover:text-white`;
       case 'icon':
         return `${baseClasses} text-[#FD9800] hover:text-[#ff6b35]`;
       default:

@@ -10,7 +10,7 @@ import { setupParallaxEffect } from '../utils/parallax';
 import { setupScrollAnimations } from '../utils/scroll-animate';
 
 export default function Hero() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Hero() {
                 </h1>
                 <p className="fade-in-start text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-1 sm:mb-2 leading-relaxed">Bonjour ! Je suis DIARRA Boh</p>
                 <div className="fade-in-start text-base sm:text-lg md:text-xl lg:text-2xl font-bold h-6 sm:h-12 md:h-16 lg:h-auto">
-                  <span className="inline-block bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">
+                  <span className="inline-block bg-gradient-to-r from-[#E8732A] to-[#C2410C] dark:from-[#FD9800] dark:to-[#ff6b35] bg-clip-text text-transparent">
                     Full-Stack Developer
                   </span>
                 </div>
@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className={`hero-section min-h-[60vh] sm:min-h-screen flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}
+      className={`hero-section min-h-[60vh] sm:min-h-screen flex items-center ${resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}
     >
               <div className="container mx-auto px-3 sm:px-6 py-4 sm:py-16">
         <div className="flex flex-col md:flex-row items-center">
@@ -69,15 +69,15 @@ export default function Hero() {
                     sequence={[
                       'Full-Stack Developer',
                     1500,
-                      'Social Media Manager',
+                      'Responsable marketing Digital',
                     1500,
-                    'Spécialist IT Support',
+                    'SysAdmin & Support IT',
                     1500,
                     ]}
                     wrapper="span"
                     speed={50}
                     repeat={Infinity}
-                  className="inline-block bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent"
+                  className="inline-block bg-gradient-to-r from-[#E8732A] to-[#C2410C] dark:from-[#FD9800] dark:to-[#ff6b35] bg-clip-text text-transparent"
                   />
               </div>
               <div className="hero-btn mt-3 sm:mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 sm:gap-4 w-full">
@@ -85,13 +85,13 @@ export default function Hero() {
                   href="/img/CV_Developer_web_fullstack_Boh_DIARRA.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-base bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[40px] sm:min-h-[48px] focus-visible:ring-2 ring-orange-500 font-bold text-base sm:text-lg transition-all duration-300 hover:from-[#ff6b35] hover:to-[#FD9800]"
+                  className="btn-base bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[40px] sm:min-h-[48px] focus-visible:ring-2 ring-orange-500 font-bold text-base sm:text-lg transition-all duration-300 hover:from-[#C2410C] hover:to-[#E8732A]"
                 >
                   Télécharger CV
                 </a>
                 <Link
                   href="#en-savoir-plus"
-                  className="btn-base flex items-center gap-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 py-2 sm:py-3 px-4 sm:px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[40px] sm:min-h-[48px] focus-visible:ring-2 ring-orange-500 transition-all duration-300 font-bold text-base sm:text-lg hover:bg-gradient-to-r hover:from-[#FD9800] hover:to-[#ff6b35] hover:text-white"
+                  className="btn-base flex items-center gap-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 py-2 sm:py-3 px-4 sm:px-6 rounded-full shadow-lg w-full sm:w-auto min-h-[40px] sm:min-h-[48px] focus-visible:ring-2 ring-orange-500 transition-all duration-300 font-bold text-base sm:text-lg hover:bg-gradient-to-r hover:from-[#E8732A] hover:to-[#C2410C] hover:text-white"
                 >
                   En savoir plus... <FaArrowDown size={14} />
                 </Link>
@@ -104,7 +104,7 @@ export default function Hero() {
               <div className="absolute -inset-4 z-0 rounded-3xl bg-gradient-to-br from-[#FD9800]/30 to-[#ff6b35]/10 blur-2xl opacity-80 pointer-events-none animate-pulse"></div>
               <div className="relative flex items-end justify-center">
                 {/* Bordure extérieure inférieure gradient orange */}
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[300px] md:h-7 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-b-3xl shadow-lg z-0"></div>
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[300px] md:h-7 bg-gradient-to-r from-[#E8732A] to-[#C2410C] rounded-b-3xl shadow-lg z-0"></div>
                 <div className="relative overflow-hidden rounded-3xl shadow-3xl ring-4 ring-white dark:ring-gray-900 w-[220px] h-[320px] sm:w-[260px] sm:h-[380px] md:w-[300px] md:h-[420px] z-10 flex items-end justify-center">
               <Image
                     src="/img/Profil2.webp"

@@ -1,3 +1,4 @@
+@import "tailwindcss" reference;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -71,7 +72,7 @@
     @apply ring-1 ring-[#FD9800];
   }
   .subtitle-gradient {
-    @apply text-lg font-semibold text-white bg-gradient-to-r from-[#FD9800] to-[#ff6b35] w-fit mx-auto px-3 py-1 rounded-full mb-2;
+    @apply text-lg font-semibold text-white bg-gradient-to-r from-[#E8732A] to-[#C2410C] w-fit mx-auto px-3 py-1 rounded-full mb-2;
   }
   .glassmorphism {
     @apply bg-white/60 dark:bg-gray-900/60 backdrop-blur-md border border-white/30 dark:border-gray-700/40 shadow-lg;

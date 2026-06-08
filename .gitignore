@@ -82,7 +82,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# public  <- volontairement NON ignoré : le dossier public/ de Next.js (images, CV) doit être versionné pour le déploiement
 
 # Vuepress build output
 .vuepress/dist
@@ -124,6 +124,7 @@ public
 # IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~
@@ -155,8 +156,7 @@ dist/
 .env.test.local
 .env.production.local
 
-# Package manager files
-package-lock.json
+# Package manager files (package-lock.json est versionné pour des installs déterministes sur Vercel)
 yarn.lock
 pnpm-lock.yaml
 

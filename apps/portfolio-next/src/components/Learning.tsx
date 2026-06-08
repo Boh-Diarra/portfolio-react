@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAws, FaBrain, FaBullhorn } from 'react-icons/fa6';
+import { FaAws, FaBrain } from 'react-icons/fa6';
 
 interface LearningItem {
   name: string;
@@ -19,13 +19,6 @@ const learningItems: LearningItem[] = [
     progress: 70,
     icon: <FaAws color="#FF9900" />,
     status: 'learning',
-  },
-  {
-    name: 'Meta Social Media Marketing',
-    description: "Formation sur les stratégies de marketing digital et l'utilisation professionnelle des réseaux sociaux (Meta, Facebook, Instagram).",
-    progress: 100,
-    icon: <FaBullhorn color="#4267B2" />,
-    status: 'exploring',
   },
   {
     name: 'Veille IA pour développeur',
@@ -96,7 +89,7 @@ const Learning: React.FC = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {learningItems.map((item, index) => (
+          {learningItems.map((item) => (
             <motion.div
               key={item.name}
               variants={itemVariants}
@@ -121,25 +114,10 @@ const Learning: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className={`text-sm font-medium bg-gradient-to-r ${statusColors[item.status]} bg-clip-text text-transparent`}>
-                      {statusLabels[item.status]}
-                    </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {item.progress}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${item.progress}%` }}
-                      transition={{ duration: 1.5, delay: index * 0.2 }}
-                      className="h-3 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-full relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
-                    </motion.div>
-                  </div>
+                <div>
+                  <span className={`inline-block text-sm font-semibold bg-gradient-to-r ${statusColors[item.status]} bg-clip-text text-transparent`}>
+                    {statusLabels[item.status]}
+                  </span>
                 </div>
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FD9800] to-[#ff6b35] opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
               </div>

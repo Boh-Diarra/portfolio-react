@@ -5,7 +5,7 @@ import { FaSun, FaMoon } from 'react-icons/fa6';
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // Éviter le mismatch d'hydratation

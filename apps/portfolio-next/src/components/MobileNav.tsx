@@ -19,7 +19,7 @@ interface MobileNavProps {
   socialLinks: SocialLink[];
 }
 
-export function MobileNav({ navLinks, isActive, activeSection, isOpen, onClose, activeDropdown, setActiveDropdown, toggleDropdown, closeMenu, socialLinks }: MobileNavProps) {
+export function MobileNav({ navLinks, isActive, isOpen, onClose, activeDropdown, setActiveDropdown, toggleDropdown, closeMenu, socialLinks }: MobileNavProps) {
   // Pour focus clavier sur le premier lien du sous-menu
   const dropdownRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 

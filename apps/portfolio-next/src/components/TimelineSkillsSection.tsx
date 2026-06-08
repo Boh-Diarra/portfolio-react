@@ -8,7 +8,7 @@ interface TimelineSkillsSectionProps {
 
 export const TimelineSkillsSection: React.FC<TimelineSkillsSectionProps> = ({ points, benefit }) => (
   <div className="mt-2">
-    <strong className="text-gray-800 dark:text-gray-100">Compétences acquises :</strong>
+    <strong className="text-gray-800 dark:text-gray-100">Compétences clés :</strong>
     <div className="flex flex-col gap-1 mt-1">
       {points.map((point, i) => (
         <div key={i} className="flex items-start gap-2">
@@ -19,7 +19,7 @@ export const TimelineSkillsSection: React.FC<TimelineSkillsSectionProps> = ({ po
     </div>
     {benefit && (
       <div className="mt-2">
-        <strong className="text-gray-800 dark:text-gray-100">Bénéfice :</strong>
+        <strong className="text-gray-800 dark:text-gray-100">Ce que ça vous apporte :</strong>
         <span className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: ` ${benefit}` }}></span>
       </div>
     )}

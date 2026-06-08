@@ -85,6 +85,17 @@ Pouvez-vous me contacter pour discuter de ma stratégie de contenu et obtenir un
 Merci !`
   },
   
+  marketingDigital: {
+    subject: 'Devis Marketing Digital & Social Media',
+    body: `Bonjour Boh,
+
+Je suis intéressé(e) par votre service de marketing digital et social media.
+
+Pouvez-vous me contacter pour discuter de ma stratégie (contenu, communauté, campagnes) et obtenir un devis personnalisé ?
+
+Merci !`
+  },
+
   generalProject: {
     subject: 'Projet Digital Complet',
     body: `Bonjour Boh,

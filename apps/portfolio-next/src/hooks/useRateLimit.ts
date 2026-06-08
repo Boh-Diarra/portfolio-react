@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 interface RateLimitConfig {
   maxAttempts: number;
@@ -20,7 +20,7 @@ const defaultConfig: RateLimitConfig = {
 };
 
 export const useRateLimit = (config: Partial<RateLimitConfig> = {}) => {
-  const finalConfig = { ...defaultConfig, ...config };
+  const finalConfig = useMemo(() => ({ ...defaultConfig, ...config }), [config]);
   const [state, setState] = useState<RateLimitState>({
     attempts: 0,
     lastAttempt: 0,

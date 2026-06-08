@@ -4,11 +4,10 @@ import type { Skill } from './CompetencesClient';
 
 interface SkillCardProps {
   skill: Skill;
-  index: number;
   cardVariants: Variants;
 }
 
-export const SkillCard: React.FC<SkillCardProps> = ({ skill, index, cardVariants }) => (
+export const SkillCard: React.FC<SkillCardProps> = ({ skill, cardVariants }) => (
   <motion.div
     variants={cardVariants}
     whileHover={{
@@ -26,7 +25,6 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, index, cardVariants
         <div className="flex-1">
           <h4 className="text-lg font-bold text-gray-900 dark:text-[#FD9800] mb-1 group-hover:text-[#FD9800] dark:group-hover:text-[#ff6b35] transition-colors">{skill.name}</h4>
           <p className="text-xs text-gray-700 dark:text-gray-300 mb-1">{skill.description}</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{skill.years} an{skill.years > 1 ? 's' : ''} d'expérience</p>
         </div>
       </div>
       {/* Barre de progression commentée */}

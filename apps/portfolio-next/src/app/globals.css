@@ -1,6 +1,54 @@
 @import "tailwindcss";
 @import '../styles/components.css';
 
+/* === DESIGN TOKENS — couleurs centralisées (thème clair/sombre) ===
+   Source unique de vérité. Les valeurs reproduisent EXACTEMENT l'existant
+   (aucun changement visuel). Le basculement clair/sombre se gère ici. */
+:root {
+  /* Surfaces */
+  --bg-page: #ffffff;          /* fond des sections (home) + pages */
+  --bg-page-alt: #fafafa;      /* fond de la page Compétences */
+  --surface: #ffffff;          /* cartes */
+  --surface-muted: #f9fafb;    /* footer clair / cartes secondaires */
+  --border: #e5e7eb;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* Texte */
+  --text: #1a202c;             /* titres / texte fort */
+  --text-strong: #2d3748;      /* ex .text-gray-800 */
+  --text-body: #4a5568;        /* ex .text-gray-700 */
+  --text-muted: #4a5568;       /* ex .text-gray-600 */
+  --text-subtle: #718096;      /* ex .text-gray-500 */
+  --text-faint: #a0aec0;       /* ex .text-gray-400 */
+  /* Marque */
+  --brand: #FD9800;
+  --brand-2: #ff6b35;
+  --on-brand: #ffffff;
+  --brand-strong: #c2410c;     /* orange accessible sur fond clair (texte) */
+  --brand-fill-1: #E8732A;     /* dégradé profond pour fonds à texte blanc */
+  --brand-fill-2: #C2410C;
+}
+
+html.dark {
+  --bg-page: #111827;          /* gray-900 */
+  --bg-page-alt: #111827;
+  --surface: #1f2937;          /* gray-800 */
+  --surface-muted: #18181b;
+  --border: #374151;           /* gray-700 */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --text: #f9fafb;
+  --text-strong: #f3f4f6;
+  --text-body: #e5e7eb;
+  --text-muted: #d1d5db;
+  --text-subtle: #9ca3af;
+  --text-faint: #9ca3af;
+  --brand: #FD9800;
+  --brand-2: #ff6b35;
+  --on-brand: #ffffff;
+  --brand-strong: #fdba74;     /* orange lisible sur fond sombre (texte) */
+  --brand-fill-1: #E8732A;     /* dégradé profond : identique aux deux thèmes (texte blanc dessus) */
+  --brand-fill-2: #C2410C;
+}
+
 /* === RESPONSIVE DESIGN OPTIMIZATIONS === */
 
 /* Mobile-first base styles */
@@ -81,7 +129,7 @@ section[id="team"],
 section[id="skills"],
 section[id="experience"],
 section[id="en-savoir-plus"] {
-  background-color: white !important;
+  background-color: var(--bg-page) !important;
   transition: background-color 0.4s ease;
 }
 
@@ -93,7 +141,7 @@ html.dark section[id="team"],
 html.dark section[id="skills"],
 html.dark section[id="experience"],
 html.dark section[id="en-savoir-plus"] {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  background-color: var(--bg-page) !important; /* bg-gray-900 */
 }
 
 /* Hero section should follow its own theme rules */
@@ -103,22 +151,22 @@ section[id="home"] {
 
 /* Force theme on any page using competences-page class */
 .competences-page {
-  background-color: #fafafa !important;
+  background-color: var(--bg-page-alt) !important;
   transition: background-color 0.4s ease;
 }
 
 html.dark .competences-page {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  background-color: var(--bg-page-alt) !important; /* bg-gray-900 */
 }
 
 /* Force theme on Learning component sections within competences page */
 .competences-page section {
-  background-color: white !important;
+  background-color: var(--bg-page) !important;
   transition: background-color 0.4s ease;
 }
 
 html.dark .competences-page section {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  background-color: var(--bg-page) !important; /* bg-gray-900 */
 }
 
 /* === RESPONSIVE ANIMATIONS === */
@@ -255,7 +303,7 @@ header {
 /* Mode clair - menu mobile avec fond blanc légèrement transparent */
 html:not(.dark) .mobile-menu {
   background-color: rgba(255, 255, 255, 0.90) !important;
-  border-bottom-color: #e5e7eb !important;
+  border-bottom-color: var(--border) !important;
 }
 
 /* Mode sombre - menu mobile */
@@ -315,7 +363,7 @@ html:not(.dark) .mobile-menu h2 {
 
 /* Mode sombre - titre "Menu" */
 html.dark .mobile-menu h2 {
-  color: #f3f4f6 !important;
+  color: var(--text-strong) !important;
   font-weight: 600 !important;
 }
 
@@ -427,54 +475,45 @@ html.dark header.scrolled[class*="bg-"] {
   transition: all 0.3s ease;
 }
 
-/* Mode clair - cartes */
-html:not(.dark) .card-base,
-html:not(.dark) .about-card,
-html:not(.dark) .timeline-card {
-  background-color: white !important;
-  border: 1px solid #e5e7eb !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-}
-
-/* Mode sombre - cartes */
-html.dark .card-base,
-html.dark .about-card,
-html.dark .timeline-card {
-  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
-  border: 1px solid rgb(55 65 81) !important; /* border-gray-700 */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+/* Cartes — couleurs centralisées via tokens (bascule clair/sombre automatique) */
+.card-base,
+.about-card,
+.timeline-card {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
 }
 
 /* === TEXTES THÈME === */
 
-/* Textes optimisés pour la lisibilité */
+/* Textes — couleurs centralisées via tokens (sélecteurs conservés, bascule par variables) */
 html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) h4,
 html:not(.dark) h5,
 html:not(.dark) h6 {
-  color: #1a202c !important; /* Noir profond pour titres */
+  color: var(--text) !important;
 }
 
 html:not(.dark) .text-gray-800 {
-  color: #2d3748 !important; /* Gris très foncé */
+  color: var(--text-strong) !important;
 }
 
 html:not(.dark) .text-gray-700 {
-  color: #4a5568 !important; /* Texte principal */
+  color: var(--text-body) !important;
 }
 
 html:not(.dark) .text-gray-600 {
-  color: #4a5568 !important; /* Contenu */
+  color: var(--text-muted) !important;
 }
 
 html:not(.dark) .text-gray-500 {
-  color: #718096 !important; /* Texte secondaire */
+  color: var(--text-subtle) !important;
 }
 
 html:not(.dark) .text-gray-400 {
-  color: #a0aec0 !important; /* Texte subtle */
+  color: var(--text-faint) !important;
 }
 
 /* Mode sombre - textes */
@@ -484,27 +523,32 @@ html.dark h3,
 html.dark h4,
 html.dark h5,
 html.dark h6 {
-  color: #f9fafb !important; /* text-gray-50 */
+  color: var(--text) !important;
 }
 
 html.dark .text-gray-800 {
-  color: #f3f4f6 !important; /* text-gray-100 */
+  color: var(--text-strong) !important;
 }
 
 html.dark .text-gray-700 {
-  color: #e5e7eb !important; /* text-gray-200 */
+  color: var(--text-body) !important;
 }
 
 html.dark .text-gray-600 {
-  color: #d1d5db !important; /* text-gray-300 */
+  color: var(--text-muted) !important;
 }
 
 html.dark .text-gray-500 {
-  color: #9ca3af !important; /* text-gray-400 */
+  color: var(--text-subtle) !important;
 }
 
 html.dark .text-gray-400 {
-  color: #9ca3af !important; /* text-gray-400 */
+  color: var(--text-faint) !important;
+}
+
+/* Accent orange en TEXTE — orange profond sur fond clair (contraste AA), vif conservé en sombre */
+html:not(.dark) .text-\[#FD9800\] {
+  color: var(--brand-strong) !important;
 }
 
 /* === NAVBAR THÈME === */
@@ -516,14 +560,14 @@ header, nav {
 
 /* Correction du contraste navbar en mode clair */
 html:not(.dark) header {
-  background-color: white !important;
-  border-bottom-color: #e5e7eb !important;
+  background-color: var(--surface) !important;
+  border-bottom-color: var(--border) !important;
 }
 
 /* Mode sombre - navbar */
 html.dark header {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
-  border-bottom-color: rgb(55 65 81) !important; /* border-gray-700 */
+  background-color: var(--bg-page) !important; /* bg-gray-900 */
+  border-bottom-color: var(--border) !important; /* border-gray-700 */
 }
 
 /* Assurer la visibilité des liens en mode clair */
@@ -535,7 +579,7 @@ html:not(.dark) header nav a {
 
 /* Mode sombre - liens */
 html.dark header nav a {
-  color: #e5e7eb !important; /* text-gray-200 - blanc bien visible */
+  color: var(--text-body) !important; /* text-gray-200 - blanc bien visible */
   font-weight: 500 !important;
   transition: all 0.3s ease !important;
 }
@@ -558,7 +602,7 @@ html:not(.dark) header .text-gray-800 {
 
 /* Mode sombre - logo (déjà correct) */
 html.dark header .text-gray-800 {
-  color: #f3f4f6 !important; /* text-gray-100 */
+  color: var(--text-strong) !important; /* text-gray-100 */
   font-weight: 600 !important;
 }
 
@@ -571,9 +615,9 @@ html:not(.dark) header button {
 
 /* Mode sombre - boutons (déjà correct) */
 html.dark header button {
-  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
-  color: #d1d5db !important; /* text-gray-300 */
-  border-color: rgb(55 65 81) !important; /* border-gray-700 */
+  background-color: var(--surface) !important; /* bg-gray-800 */
+  color: var(--text-muted) !important; /* text-gray-300 */
+  border-color: var(--border) !important; /* border-gray-700 */
 }
 
 /* Assurer la visibilité des icônes sociales en mode clair */
@@ -643,8 +687,8 @@ html.dark .icon-social[data-icon="github"] {
 
 /* Mode clair - cartes Learning */
 html:not(.dark) section:has(.grid) .bg-white {
-  background-color: white !important;
-  border-color: #e5e7eb !important;
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
 }
 
 html:not(.dark) section:has(.grid) .text-gray-900 {
@@ -673,19 +717,19 @@ html.dark section:has(.grid) .dark\:text-white {
 }
 
 html.dark section:has(.grid) .dark\:text-gray-300 {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 html.dark section:has(.grid) .dark\:text-gray-400 {
-  color: #9ca3af !important;
+  color: var(--text-subtle) !important;
 }
 
 /* === CARTES COMPÉTENCES - ADAPTATION THÉMATIQUE === */
 
 /* Mode clair - cartes de compétences */
 html:not(.dark) .competences-page .bg-white {
-  background-color: white !important;
-  border-color: #e5e7eb !important;
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
 }
 
 html:not(.dark) .competences-page .text-gray-900 {
@@ -714,11 +758,11 @@ html.dark .competences-page .dark\:text-\[#FD9800\] {
 }
 
 html.dark .competences-page .dark\:text-gray-300 {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 html.dark .competences-page .dark\:text-gray-400 {
-  color: #9ca3af !important;
+  color: var(--text-subtle) !important;
 }
 
 /* === THÈME HERO === */
@@ -728,9 +772,9 @@ html.dark #home {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
 }
 
-/* Forcer le dégradé bleu-teal pour le titre principal en mode clair */
+/* Forcer le dégradé bleu-teal pour le titre principal en mode clair (assombri pour contraste AA) */
 html:not(.dark) #home h1 {
-  background: linear-gradient(90deg, #3b82f6 0%, #14b8a6 100%) !important;
+  background: linear-gradient(90deg, #2563eb 0%, #0f766e 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -754,7 +798,7 @@ html.dark #home h1 {
 
 /* Titres des colonnes footer en mode clair */
 html:not(.dark) footer h3:not(.text-\[#FD9800\]) {
-  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%) !important;
+  background: linear-gradient(90deg, var(--brand-fill-1) 0%, var(--brand-fill-2) 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -763,7 +807,7 @@ html:not(.dark) footer h3:not(.text-\[#FD9800\]) {
 }
 
 html:not(.dark) footer h4 {
-  background: linear-gradient(90deg, #FD9800 0%, #ff6b35 100%) !important;
+  background: linear-gradient(90deg, var(--brand-fill-1) 0%, var(--brand-fill-2) 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -771,9 +815,9 @@ html:not(.dark) footer h4 {
   font-weight: bold !important;
 }
 
-/* Titre principal avec orange conservé */
+/* Titre/bouton orange — orange profond pour contraste AA en clair */
 html:not(.dark) footer .text-\[#FD9800\] {
-  color: #FD9800 !important;
+  color: var(--brand-strong) !important;
 }
 
 /* === FOOTER CONTACT CARDS - CORRECTION COMPLÈTE === */
@@ -790,12 +834,12 @@ html:not(.dark) footer .bg-gray-800:hover {
 
 /* Mode sombre - cartes de contact */
 html.dark footer .bg-gray-800 {
-  background-color: rgb(31 41 55) !important;
+  background-color: var(--surface) !important;
   transition: all 0.3s ease !important;
 }
 
 html.dark footer .bg-gray-800:hover {
-  background-color: rgb(55 65 81) !important;
+  background-color: var(--border) !important;
 }
 
 /* === FOOTER CONTACT TEXT - OPTIMISATION COMPLÈTE === */
@@ -826,7 +870,7 @@ html.dark footer .bg-gray-800 p.text-sm {
 
 /* Mode clair - textes footer optimisés */
 html:not(.dark) footer {
-  background-color: #f9fafb !important;
+  background-color: var(--surface-muted) !important;
 }
 
 html:not(.dark) footer p.text-black {
@@ -857,22 +901,22 @@ html:not(.dark) footer .footer-link:hover {
 
 /* Mode sombre - textes footer optimisés */
 html.dark footer {
-  background-color: #18181b !important;
+  background-color: var(--surface-muted) !important;
 }
 
 html.dark footer p.text-black {
-  color: #f9fafb !important;
+  color: var(--text) !important;
   font-weight: 400 !important;
 }
 
 html.dark footer p.text-white {
-  color: #f9fafb !important;
+  color: var(--text) !important;
   font-weight: 400 !important;
 }
 
 /* Mode sombre - liens footer optimisés */
 html.dark footer .footer-link {
-  color: #f9fafb !important;
+  color: var(--text) !important;
   font-weight: 500 !important;
   transition: all 0.3s ease !important;
 }
@@ -902,7 +946,7 @@ html:not(.dark) footer a:not(.footer-link):hover {
 
 /* Mode sombre - autres liens footer optimisés */
 html.dark footer a:not(.footer-link) {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
   font-weight: 500 !important;
   transition: all 0.3s ease !important;
 }
@@ -1184,13 +1228,13 @@ html.dark footer .group:hover .text-orange-500 svg {
 }
 
 html.dark .competences-page {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  background-color: var(--bg-page) !important; /* bg-gray-900 */
 }
 
 /* Cartes de compétences - mode clair */
 html:not(.dark) .competences-page .bg-white {
-  background-color: white !important;
-  border-color: #e5e7eb !important;
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
 }
 
 html:not(.dark) .competences-page .text-gray-900 {
@@ -1223,33 +1267,33 @@ html.dark .competences-page .dark\:text-\[#FD9800\] {
 }
 
 html.dark .competences-page .dark\:text-gray-300 {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 html.dark .competences-page .dark\:text-gray-400 {
-  color: #9ca3af !important;
+  color: var(--text-subtle) !important;
 }
 
 /* Forcer les couleurs des textes dans les cartes en mode sombre */
 html.dark .competences-page .text-gray-900 {
-  color: #f9fafb !important; /* text-gray-50 */
+  color: var(--text) !important; /* text-gray-50 */
 }
 
 html.dark .competences-page .text-gray-700 {
-  color: #e5e7eb !important; /* text-gray-200 */
+  color: var(--text-body) !important; /* text-gray-200 */
 }
 
 html.dark .competences-page .text-gray-600 {
-  color: #d1d5db !important; /* text-gray-300 */
+  color: var(--text-muted) !important; /* text-gray-300 */
 }
 
 /* Section Learning dans la page compétences */
 html:not(.dark) .competences-page section {
-  background-color: white !important;
+  background-color: var(--surface) !important;
 }
 
 html.dark .competences-page section {
-  background-color: rgb(17 24 39) !important; /* bg-gray-900 */
+  background-color: var(--bg-page) !important; /* bg-gray-900 */
 }
 
 /* Titres de catégories de compétences */
@@ -1258,7 +1302,7 @@ html:not(.dark) .competences-page h2 {
 }
 
 html.dark .competences-page h2 {
-  color: #f9fafb !important;
+  color: var(--text) !important;
 }
 
 /* Textes de description dans la page compétences */
@@ -1267,7 +1311,7 @@ html:not(.dark) .competences-page p {
 }
 
 html.dark .competences-page p {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 /* Forcer les bordures des cartes en mode sombre */
@@ -1293,15 +1337,15 @@ html.dark .competences-page div[class*="border-gray-200"] {
 
 /* Forcer tous les textes en mode sombre */
 html.dark .competences-page .text-gray-900 {
-  color: #f9fafb !important;
+  color: var(--text) !important;
 }
 
 html.dark .competences-page .text-gray-700 {
-  color: #e5e7eb !important;
+  color: var(--text-body) !important;
 }
 
 html.dark .competences-page .text-gray-600 {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 /* Forcer les titres des cartes en mode sombre */
@@ -1311,16 +1355,16 @@ html.dark .competences-page h4.text-gray-900 {
 
 /* Forcer les descriptions en mode sombre */
 html.dark .competences-page p.text-gray-700 {
-  color: #e5e7eb !important;
+  color: var(--text-body) !important;
 }
 
 html.dark .competences-page p.text-gray-600 {
-  color: #d1d5db !important;
+  color: var(--text-muted) !important;
 }
 
 /* Forcer les années d'expérience en mode sombre */
 html.dark .competences-page p.text-gray-600 {
-  color: #9ca3af !important;
+  color: var(--text-subtle) !important;
 }
 
 /* === DROPDOWNS NAVBAR - CORRECTION CONTRASTE === */
@@ -1328,16 +1372,16 @@ html.dark .competences-page p.text-gray-600 {
 /* Mode clair - dropdowns */
 html:not(.dark) header .group:hover > div[class*="absolute"],
 html:not(.dark) header div[class*="absolute"][role="menu"] {
-  background-color: #ffffff !important; /* Fond blanc */
-  border-color: #e5e7eb !important; /* Bordure grise claire */
+  background-color: var(--surface) !important; /* Fond blanc */
+  border-color: var(--border) !important; /* Bordure grise claire */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Mode sombre - dropdowns (déjà correct) */
 html.dark header .group:hover > div[class*="absolute"],
 html.dark header div[class*="absolute"][role="menu"] {
-  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
-  border-color: rgb(55 65 81) !important; /* border-gray-700 */
+  background-color: var(--surface) !important; /* bg-gray-800 */
+  border-color: var(--border) !important; /* border-gray-700 */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -1352,7 +1396,7 @@ html:not(.dark) header div[class*="absolute"][role="menu"] a {
 /* Mode sombre - liens des dropdowns (déjà correct) */
 html.dark header .group:hover > div[class*="absolute"] a,
 html.dark header div[class*="absolute"][role="menu"] a {
-  color: #e5e7eb !important; /* text-gray-200 - blanc bien visible */
+  color: var(--text-body) !important; /* text-gray-200 - blanc bien visible */
   font-weight: 500 !important;
   transition: all 0.3s ease !important;
 }
@@ -1380,7 +1424,7 @@ html:not(.dark) header div[class*="absolute"][role="menu"] a[class*="bg-orange"]
 html.dark header .group:hover > div[class*="absolute"] a[class*="bg-orange"],
 html.dark header div[class*="absolute"][role="menu"] a[class*="bg-orange"] {
   color: #fdba74 !important; /* text-orange-300 */
-  background-color: rgb(31 41 55) !important; /* bg-gray-800 */
+  background-color: var(--surface) !important; /* bg-gray-800 */
 }
 
 /* === BOUTONS DROPDOWN - RETRAIT DU FOND === */
@@ -1461,9 +1505,9 @@ html:not(.dark) footer .border-t p {
 
 /* Mode sombre - pas de changement (déjà correct) */
 html.dark footer p {
-  color: #f9fafb !important; /* Conservé tel quel */
+  color: var(--text) !important; /* Conservé tel quel */
 }
 
 html.dark footer .border-t p {
-  color: #f9fafb !important; /* Conservé tel quel */
+  color: var(--text) !important; /* Conservé tel quel */
 }

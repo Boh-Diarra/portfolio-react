@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { SkillCard } from './SkillCard';
 import type { Skill } from './CompetencesClient';
 
@@ -7,7 +7,7 @@ interface SkillCategorySectionProps {
   category: string;
   categorySkills: Skill[];
   categories: Record<string, { title: string; color: string }>;
-  cardVariants: any;
+  cardVariants: Variants;
 }
 
 export const SkillCategorySection: React.FC<SkillCategorySectionProps> = ({ category, categorySkills, categories, cardVariants }) => (
@@ -18,8 +18,8 @@ export const SkillCategorySection: React.FC<SkillCategorySectionProps> = ({ cate
       </h2>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {categorySkills.map((skill, index) => (
-        <SkillCard key={skill.name} skill={skill} index={index} cardVariants={cardVariants} />
+      {categorySkills.map((skill) => (
+        <SkillCard key={skill.name} skill={skill} cardVariants={cardVariants} />
       ))}
     </div>
   </motion.div>

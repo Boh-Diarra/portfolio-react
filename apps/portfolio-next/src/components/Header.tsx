@@ -18,7 +18,7 @@ const navLinks: NavLink[] = [
     label: 'Mes travaux', 
     subMenu: [
       { href: '/#experience', label: 'Expériences' },
-      { href: '/#portfolio', label: 'Portfolio' },
+      { href: '/#portfolio', label: 'Réalisations' },
     ],
   },
   { href: '/#service', label: 'Services' },

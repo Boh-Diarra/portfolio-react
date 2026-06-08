@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# Run linting
-cd apps/portfolio-next && npm run lint
+# Run linting (sous-shell : le cd ne persiste pas d'une commande à l'autre)
+( cd apps/portfolio-next && npm run lint ) || exit 1
 
 # Run type checking
-cd apps/portfolio-next && npm run type-check
+( cd apps/portfolio-next && npm run type-check ) || exit 1
 
 # Run tests if they exist
-# cd apps/portfolio-next && npm test 
+# ( cd apps/portfolio-next && npm test ) || exit 1

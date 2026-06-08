@@ -30,17 +30,17 @@ const contactInfo = [
 ];
 
 const services = [
-  'Développement Web',
+  'Sites & Plateformes Web',
+  'Marketing Digital & Social Media',
   'Applications Mobiles',
-  'Support IT',
-  'Community Management'
+  'Infogérance & Support IT'
 ];
 
 const navigation = [
   { name: 'Accueil', href: '/#home' },
   { name: 'À propos', href: '/#about' },
   { name: 'Services', href: '/#service' },
-  { name: 'Portfolio', href: '/#portfolio' },
+  { name: 'Réalisations', href: '/#portfolio' },
   { name: 'Expériences', href: '/#experience' },
   { name: 'Contact', href: '/#contact' }
 ];
@@ -150,10 +150,21 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Feedback / suggestion */}
+        <div className="text-center mt-8">
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event('open-feedback'))}
+            className="inline-flex items-center gap-2 text-[#FD9800] font-semibold hover:underline focus-visible:ring-2 focus-visible:ring-orange-400 rounded transition-colors"
+          >
+            💡 Une idée d&apos;amélioration ? Proposez une suggestion
+          </button>
+        </div>
+
         {/* Copyright */}
         <div className="border-t border-orange-500 dark:border-orange-500 mt-8 pt-6 text-center">
           <p>
-            © 2025 Tous droits réservés. |
+            © {new Date().getFullYear()} Tous droits réservés. |
             <span className="text-orange-800 dark:text-[#ff6b35] ml-1">By Boh DIARRA</span>
           </p>
         </div>

@@ -8,12 +8,12 @@ const cards = [
     title: 'Mon Parcours',
     content: (
       <>
-        <p className="text-center">Mon parcours dans le numérique a commencé par une passion pour la technologie et l'innovation. J'ai suivi une formation solide en génie informatique qui m'a donné les bases techniques nécessaires, puis j'ai constamment évolué en suivant les dernières tendances du développement web et mobile.</p>
+        <p className="text-center">Mon aventure dans le numérique est née d'une passion pour la technologie et la résolution de problèmes concrets. Une formation en génie informatique m'a donné des fondations techniques solides, que j'ai enrichies année après année, du développement web et mobile jusqu'au marketing digital. C'est cette double expertise, encore rare, qui me permet aujourd'hui de piloter un projet de bout en bout, sans intermédiaire.</p>
         <ul className="flex flex-wrap gap-3 mt-4 justify-center text-sm text-gray-700 dark:text-gray-300">
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">5+ années d'expérience</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">10+ certifications</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">10+ projets réalisés</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">10+ clients satisfaits</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">5+ années d'expérience</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">10+ certifications pro (Meta, Google)</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">10+ projets livrés</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">Une double casquette : développement + marketing</li>
         </ul>
       </>
     ),
@@ -23,12 +23,12 @@ const cards = [
     title: 'Ma Philosophie',
     content: (
       <>
-        <p className="text-center">Je crois que la technologie doit servir l'humain et créer de la valeur réelle. Chaque projet que j'entreprends est guidé par cette conviction : créer des solutions qui non seulement fonctionnent parfaitement, mais qui améliorent la vie des utilisateurs et contribuent au succès des entreprises.</p>
-        <ul className="mt-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-          <li className="flex items-center gap-2 justify-center"><FaUserCheck color="#FD9800" /> Innovation centrée sur l'utilisateur</li>
-          <li className="flex items-center gap-2 justify-center"><FaChartLine color="#FD9800" /> Qualité et performance optimales</li>
-          <li className="flex items-center gap-2 justify-center"><FaHandshake color="#FD9800" /> Collaboration et transparence</li>
-          <li className="flex items-center gap-2 justify-center"><FaAward color="#FD9800" /> Apprentissage continu</li>
+        <p className="text-center">Pour moi, la technologie n'a de valeur que si elle sert l'humain et crée un impact réel. Un beau site ou une application performante ne sont jamais une fin en soi : ce sont des outils au service de vos clients et de votre croissance. Je conçois donc chaque solution en partant de l'utilisateur final et du résultat attendu, jamais de la prouesse technique pour elle-même.</p>
+        <ul className="mt-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 w-fit mx-auto text-left">
+          <li className="flex items-start gap-2"><FaUserCheck color="#FD9800" className="mt-1 shrink-0" /><span>L'utilisateur final au centre de chaque décision</span></li>
+          <li className="flex items-start gap-2"><FaChartLine color="#FD9800" className="mt-1 shrink-0" /><span>Le résultat business comme boussole</span></li>
+          <li className="flex items-start gap-2"><FaHandshake color="#FD9800" className="mt-1 shrink-0" /><span>Des solutions durables, pas des effets de mode</span></li>
+          <li className="flex items-start gap-2"><FaAward color="#FD9800" className="mt-1 shrink-0" /><span>Une veille technologique permanente</span></li>
         </ul>
       </>
     ),
@@ -38,12 +38,12 @@ const cards = [
     title: 'Ma Mission',
     content: (
       <>
-        <p className="text-center">Ma mission est d'accompagner les entreprises et entrepreneurs dans leur transformation digitale en créant des solutions innovantes, performantes et durables. Je m'engage à être un partenaire de confiance qui comprend vos enjeux et vous aide à atteindre vos objectifs grâce à la technologie.</p>
+        <p className="text-center">Ma mission : accompagner entreprises et entrepreneurs dans une transformation digitale qui porte réellement ses fruits. Je m'engage à comprendre vos enjeux, à tenir mes délais et à livrer des solutions qui vous rapportent, pas simplement des projets « terminés ».</p>
         <ul className="flex flex-wrap gap-3 mt-4 justify-center text-sm text-gray-700 dark:text-gray-300">
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">98% Satisfaction client</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">24h Temps de réponse</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">100% projets livrés</li>
-          <li className="bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white px-3 py-1 rounded-full">5+ années d'expérience</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">98 % de satisfaction client</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">Réponse sous 24h</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">100 % des projets livrés</li>
+          <li className="bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white px-3 py-1 rounded-full">Un suivi assuré après la livraison</li>
         </ul>
       </>
     ),

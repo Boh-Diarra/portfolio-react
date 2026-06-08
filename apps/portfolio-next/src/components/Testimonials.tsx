@@ -92,7 +92,7 @@ export default function Testimonials() {
                   <p className="italic px-2 sm:px-12 text-base sm:text-lg text-gray-900 dark:text-gray-100 font-medium drop-shadow-lg bg-white/70 dark:bg-gray-800/70 rounded-xl py-3 px-4 mb-2 max-w-xl transition-all duration-500">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
-                  <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent mt-4 drop-shadow-lg">{testimonial.name}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-[#E8732A] to-[#C2410C] dark:from-[#FD9800] dark:to-[#ff6b35] bg-clip-text text-transparent mt-4 drop-shadow-lg">{testimonial.name}</h3>
                   <h4 className="text-sm sm:text-md text-gray-500 dark:text-gray-300">{testimonial.title}</h4>
                 </div>
               </Tilt>

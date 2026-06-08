@@ -74,7 +74,7 @@ export default function Team() {
                 />
               </div>
               <div className="team-text">
-                <h2 className="text-[8px] sm:text-[10px] font-normal text-white bg-gradient-to-r from-[#FD9800] to-[#ff6b35] px-0.5 py-0.5 rounded-sm shadow w-fit mx-auto mb-1 leading-tight">{member.name}</h2>
+                <h2 className="text-[8px] sm:text-[10px] font-normal text-white bg-gradient-to-r from-[#E8732A] to-[#C2410C] px-0.5 py-0.5 rounded-sm shadow w-fit mx-auto mb-1 leading-tight">{member.name}</h2>
                 <h4 className="text-sm sm:text-md text-gray-500 dark:text-gray-300">{member.role}</h4>
                 <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300">{member.description}</p>
                 <div className="team-social mt-4 flex justify-center space-x-3">

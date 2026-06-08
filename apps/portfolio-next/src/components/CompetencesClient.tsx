@@ -19,7 +19,7 @@ const skills: Skill[] = [
   {
     name: 'JavaScript',
     level: 85,
-    years: 2,
+    years: 3,
     logo: <FaJs color="#F7DF1E" />,
     description: "Langage de programmation incontournable pour le web, utilisé côté client et serveur. Permet de créer des interfaces dynamiques et interactives.",
     category: 'frontend',
@@ -241,7 +241,7 @@ const CompetencesClient = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#E8732A] to-[#C2410C] dark:from-[#FD9800] dark:to-[#ff6b35] bg-clip-text text-transparent">
             Toutes mes compétences & formations
           </h1>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">

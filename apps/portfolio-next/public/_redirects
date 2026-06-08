@@ -13,3 +13,6 @@
 /experiences /#experiences 302
 /temoignages /#temoignages 302
 /equipe /#equipe 302
+
+# Redirection pour les fichiers statiques
+/_next/static/* /_next/static/:splat 200

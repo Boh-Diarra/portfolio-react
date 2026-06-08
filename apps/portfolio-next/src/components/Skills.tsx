@@ -50,7 +50,7 @@ const Skills: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#E8732A] to-[#C2410C] dark:from-[#FD9800] dark:to-[#ff6b35] bg-clip-text text-transparent">
             Mes Compétences principales
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -76,9 +76,6 @@ const Skills: React.FC = () => {
                       {skill.name}
                     </h4>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{skill.description}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {skill.years} an{skill.years > 1 ? 's' : ''} d'expérience
-                    </p>
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -106,7 +103,7 @@ const Skills: React.FC = () => {
         <div className="text-center">
           <a
             href="/competences"
-            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#FD9800] to-[#ff6b35] text-white font-bold shadow-lg hover:scale-105 hover:shadow-[#FD9800]/40 transition-all duration-300"
+            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white font-bold shadow-lg hover:scale-105 hover:shadow-[#FD9800]/40 transition-all duration-300"
           >
             Découvrir toutes mes compétences & formations
           </a>

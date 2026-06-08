@@ -9,29 +9,29 @@ const values = [
   {
     icon: <FaTrophy color="#FD9800" size={32} />,
     title: 'Excellence',
-    description: "Chaque ligne de code, chaque design, chaque interaction est pensée pour l'excellence.",
+    description: "Un travail soigné dans le moindre détail, du code à l'interface, parce que la qualité se voit et se ressent.",
   },
   {
     icon: <FaLightbulb color="#FD9800" size={32} />,
     title: 'Innovation',
-    description: 'Je reste constamment à jour avec les dernières technologies et tendances.',
+    description: "Les technologies récentes mises au service de résultats concrets, jamais de la technique pour la technique.",
   },
   {
     icon: <FaHandshake color="#FD9800" size={32} />,
     title: 'Collaboration',
-    description: 'Je travaille en étroite collaboration avec mes clients pour des résultats optimaux.',
+    description: "Vous êtes associé aux décisions à chaque étape : le projet reste le vôtre, je le rends réel.",
   },
   {
     icon: <FaComments color="#FD9800" size={32} />,
     title: 'Transparence',
-    description: 'Communication claire et honnête tout au long du projet.',
+    description: "Des délais tenus, des points d'avancement clairs et une communication honnête, du devis à la livraison.",
   },
 ];
 
 const stats = [
-    { value: '+150%', label: 'de trafic généré' },
-    { value: '98%', label: 'de satisfaction client' },
-    { value: '40%', label: 'd\'amélioration de productivité' },
+    { value: '+150 %', label: 'de trafic généré' },
+    { value: '98 %', label: 'de satisfaction client' },
+    { value: '40 %', label: 'd\'amélioration de productivité' },
 ]
 
 export default function About() {
@@ -46,9 +46,9 @@ export default function About() {
           <div className="lg:w-1/2 w-full">
             <div className="relative flex items-end justify-center group">
               {/* Bordure extérieure inférieure gradient orange (toujours visible) */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[320px] md:h-7 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-b-3xl shadow-lg z-0"></div>
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[220px] h-5 sm:w-[260px] sm:h-6 md:w-[320px] md:h-7 bg-gradient-to-r from-[#E8732A] to-[#C2410C] rounded-b-3xl shadow-lg z-0"></div>
               {/* Bordure supérieure gradient orange (apparaît au survol) */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-0 group-hover:w-[220px] sm:group-hover:w-[260px] md:group-hover:w-[320px] h-5 sm:h-6 md:h-7 bg-gradient-to-r from-[#FD9800] to-[#ff6b35] rounded-t-3xl rounded-b-3xl shadow-lg z-0 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-0 group-hover:w-[220px] sm:group-hover:w-[260px] md:group-hover:w-[320px] h-5 sm:h-6 md:h-7 bg-gradient-to-r from-[#E8732A] to-[#C2410C] rounded-t-3xl rounded-b-3xl shadow-lg z-0 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-3xl ring-4 ring-white dark:ring-gray-900 w-[220px] h-[320px] sm:w-[260px] sm:h-[380px] md:w-[320px] md:h-[460px] z-10 flex items-end justify-center">
               <Image
                   src="/img/about_img.webp"
@@ -64,9 +64,10 @@ export default function About() {
           <div className="lg:w-1/2">
             <div className="text-left">
               <p className="subtitle-gradient">Qui suis-je ?</p>
-              <h2 className="fade-in-start text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2 leading-tight">Plus de 5 ans d'expérience</h2>
+              <h2 className="fade-in-start text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2 leading-tight">Le digital qui sert votre business, pas l'inverse</h2>
+              <span className="fade-in-start inline-block mt-3 bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white text-sm font-semibold px-4 py-1 rounded-full">Plus de 5 ans d'expérience</span>
               <p className="fade-in-start mt-4 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Je développe vos applications web et mobiles avec des technologies modernes pour maximiser votre visibilité en ligne. Mon savoir-faire en développement fullstack et design UX me permet de créer des solutions sur mesure qui génèrent des résultats concrets : augmentation du trafic, amélioration de l'engagement utilisateur et croissance de votre business.
+              Je conçois des sites web, des applications et des stratégies digitales avec un seul objectif : faire grandir votre activité. Concrètement, mes clients gagnent en visibilité, attirent plus de prospects et transforment davantage de visiteurs en clients. Développeur fullstack <strong>et</strong> responsable marketing digital, je réunis la technique et le marketing en un interlocuteur unique, de la première ligne de code jusqu'au résultat business.
               </p>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function About() {
         <div className="text-center mt-20 p-8 bg-white dark:bg-gray-800/50 rounded-lg shadow-xl card-base card-orange-shadow fade-in-start hover:ring-1 hover:ring-[#FD9800] transition-all duration-300">
             <h3 className="fade-in-start text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">Mon Approche</h3>
             <p className="fade-in-start mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Je crois fermement que chaque projet est une opportunité de créer quelque chose d'unique. Mon approche est centrée sur la compréhension profonde de vos besoins, la créativité technique et la livraison de résultats qui dépassent vos attentes. Je m'engage à être votre partenaire de confiance dans votre transformation digitale.
+                Chaque projet commence par une vraie compréhension de votre activité et de vos objectifs, pas par la technique. Je traduis ensuite vos besoins en une solution sur mesure, performante et durable, en restant votre interlocuteur direct à chaque étape. Mon engagement : des livrables qui dépassent le cahier des charges et des résultats que vous pouvez mesurer.
             </p>
                   </div>
 
@@ -99,10 +100,17 @@ export default function About() {
         </div>
 
         {/* Why me section */}
-        <div className="mt-20 text-center bg-gradient-to-r from-orange-400 to-orange-600 text-white p-6 sm:p-12 rounded-lg shadow-2xl">
-            <h3 className="fade-in-start text-xl sm:text-2xl md:text-3xl font-bold">Pourquoi me choisir ?</h3>
-            <p className="fade-in-start mt-4 max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-orange-100 leading-relaxed font-semibold">
-                Pour bâtir un écosystème digital complet, sans friction. Je ne me contente pas de créer votre outil ; je lui donne vie et je garantis sa performance.
+        <div
+          className="mt-20 text-center text-white rounded-lg shadow-2xl"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 0%, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.12) 26%, rgba(0,0,0,0) 55%), radial-gradient(circle at 50% 0%, #F2853C 0%, #C75418 30%, #0F2747 95%)',
+            padding: 'clamp(1.5rem, 4vw, 3rem)',
+          }}
+        >
+            <h3 className="fade-in-start font-bold text-[clamp(1.25rem,3vw,1.875rem)]">Pourquoi me choisir ?</h3>
+            <p className="fade-in-start mt-4 max-w-[62ch] mx-auto text-[clamp(1rem,2.5vw,1.25rem)] text-white leading-relaxed">
+            La plupart des prestataires s'arrêtent au code. Moi, je vous accompagne plus loin : concevoir, faire connaître et faire durer votre projet.
             </p>
             
             {/* Services cards */}
@@ -110,29 +118,29 @@ export default function About() {
                 <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                     <h4 className="font-bold text-lg mb-2 text-white">Développement</h4>
                     <p className="text-orange-100 text-sm leading-relaxed">
-                        Je conçois et bâtis votre plateforme (web ou mobile), en créant une solution technique robuste et parfaitement adaptée à vos ambitions.
+                        Je conçois et bâtis votre plateforme web ou mobile : une solution technique robuste, parfaitement adaptée à vos ambitions.
                     </p>
                 </div>
                 
                 <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                     <h4 className="font-bold text-lg mb-2 text-white">Engagement</h4>
                     <p className="text-orange-100 text-sm leading-relaxed">
-                        Je connecte votre projet à votre public cible, en créant l'engagement nécessaire pour générer des résultats visibles et concrets.
+                        Je connecte votre projet à votre public cible et crée l'engagement qui génère des résultats visibles.
                     </p>
                 </div>
                 
                 <div className="fade-in-start bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                     <h4 className="font-bold text-lg mb-2 text-white">Performance</h4>
                     <p className="text-orange-100 text-sm leading-relaxed">
-                        Je veille à ce que l'ensemble de votre infrastructure reste performante, sécurisée et fiable au quotidien, pour que votre activité ne s'arrête jamais.
+                        Je veille à ce que votre infrastructure reste rapide, sécurisée et fiable, pour que votre activité ne s'arrête jamais.
                     </p>
                 </div>
             </div>
 
             {/* Final advantage */}
-            <div className="fade-in-start mt-8 max-w-3xl mx-auto">
-                <p className="text-orange-50 font-semibold text-base sm:text-lg md:text-xl leading-relaxed">
-                    Votre avantage : <span className="text-white">Un seul partenaire stratégique qui pilote votre projet de la première ligne de code jusqu'au client final, assurant une cohérence totale et une performance mesurable.</span>
+            <div className="fade-in-start mt-8 max-w-[62ch] mx-auto">
+                <p className="text-orange-50 text-[clamp(1rem,2.5vw,1.25rem)] leading-relaxed">
+                    Votre avantage : <span className="text-white"> un seul interlocuteur du début à la fin. Pas de prestataires qui se renvoient la balle, un projet cohérent, et des résultats que vous pouvez mesurer.</span>
                 </p>
             </div>
 
@@ -144,6 +152,7 @@ export default function About() {
                 </div>
               ))}
           </div>
+          <p className="fade-in-start mt-4 text-orange-200 text-sm italic">sur mes projets clients</p>
         </div>
       </div>
     </section>
