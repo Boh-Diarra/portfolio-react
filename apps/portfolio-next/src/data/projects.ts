@@ -166,7 +166,7 @@ export const gridProjects: GridProject[] = [
     title: 'Djoliba Show',
     description: 'Billetterie événementielle en ligne avec QR codes scannables et paiement intégré.',
     category: 'Sites Web',
-    image: '/img/djoliba_show.webp',
+    image: '/img/Djoliba_show.webp',
     link: 'https://djoliba-show.com/',
   },
 ];
