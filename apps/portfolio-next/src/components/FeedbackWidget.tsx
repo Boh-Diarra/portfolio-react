@@ -166,6 +166,7 @@ export default function FeedbackWidget() {
                     value={botField}
                     onChange={(e) => setBotField(e.target.value)}
                     name="botcheck"
+                    maxLength={100}
                     className="hidden"
                     tabIndex={-1}
                     autoComplete="off"
@@ -188,6 +189,7 @@ export default function FeedbackWidget() {
                         id="fb-message"
                         required
                         rows={4}
+                        maxLength={2000}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Votre suggestion d'amélioration…"
@@ -200,6 +202,7 @@ export default function FeedbackWidget() {
                       <input
                         id="fb-email"
                         type="email"
+                        maxLength={254}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="pour vous recontacter"
