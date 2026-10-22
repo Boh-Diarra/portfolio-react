@@ -1,0 +1,2 @@
+# Les hooks Husky doivent garder des fins de ligne Unix (sinon « sh\r » introuvable)
+.husky/* text eol=lf
