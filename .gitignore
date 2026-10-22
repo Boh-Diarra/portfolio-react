@@ -171,3 +171,7 @@ coverage/
 # Temporary folders
 .tmp/
 .temp/ 
+
+# Fichiers locaux (assistant, notes de contenu internes)
+.claude/
+docs/portfolio-update-*.md

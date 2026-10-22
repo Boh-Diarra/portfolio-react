@@ -1,49 +1,61 @@
 version: 2
 updates:
-  # Enable version updates for npm
+  # Dépendances npm du monorepo (racine)
   - package-ecosystem: "npm"
     directory: "/"
+    target-branch: "master"
     schedule:
       interval: "weekly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "votre-username"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
     assignees:
-      - "votre-username"
+      - "Boh-Diarra"
     commit-message:
       prefix: "chore"
       include: "scope"
 
-  # Enable version updates for npm in apps/portfolio-next
+  # Dépendances npm de l'application Next.js
   - package-ecosystem: "npm"
     directory: "/apps/portfolio-next"
+    target-branch: "master"
     schedule:
       interval: "weekly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "votre-username"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
     assignees:
-      - "votre-username"
+      - "Boh-Diarra"
     commit-message:
       prefix: "chore"
       include: "scope"
 
-  # Enable version updates for GitHub Actions
+  # Actions GitHub
   - package-ecosystem: "github-actions"
     directory: "/"
+    target-branch: "master"
     schedule:
       interval: "weekly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "votre-username"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
     assignees:
-      - "votre-username"
+      - "Boh-Diarra"
     commit-message:
       prefix: "chore"
-      include: "scope" 
+      include: "scope"
