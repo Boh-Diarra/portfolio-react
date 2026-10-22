@@ -6,7 +6,7 @@ export const professionalExperience: TimelineItemProps[] = [
     date: '2022 - Maintenant',
     title: 'Développeur Fullstack & WordPress',
     subtitle: 'Freelance',
-    description: `**Réalisations principales :**\n• Conception et développement de sites web, plateformes et applications sur mesure pour des clients au Mali et en Afrique de l'Ouest, du cahier des charges jusqu'à la mise en production.\n• Accompagnement complet : développement, optimisation SEO, formation des équipes clientes et suivi après livraison.\n• Maîtrise d'un large périmètre technique (React/Next.js, Node.js, WordPress/WooCommerce) au service de projets variés : corporate, e-commerce, institutionnel, événementiel.\n• Résultat : Plus de 10 projets livrés, 98 % de satisfaction client et une relation de confiance qui génère des recommandations régulières.`,
+    description: `**Réalisations principales :**\n• Conception et développement de sites web, plateformes et applications sur mesure pour des clients au Mali et en Afrique de l'Ouest, du cahier des charges jusqu'à la mise en production.\n• Accompagnement complet : développement, optimisation SEO, formation des équipes clientes et suivi après livraison.\n• Maîtrise d'un large périmètre technique (React/Next.js, Node.js, WordPress/WooCommerce) au service de projets variés : corporate, e-commerce, institutionnel, événementiel.\n• Mission de réponse à incident (août 2026) : investigation, remédiation et sécurisation de 12 environnements web pour un groupe industriel ouest-africain.\n• Résultat : Plus de 10 projets livrés, 98 % de satisfaction client et une relation de confiance qui génère des recommandations régulières.`,
   },
   {
     date: 'Octobre 2025 - Maintenant',
@@ -24,6 +24,14 @@ export const professionalExperience: TimelineItemProps[] = [
 
 // Données des certifications détaillées (Niveau 1, timeline en zigzag).
 export const certifications: TimelineItemProps[] = [
+  {
+    date: 'Août 2026 - Octobre 2026',
+    title: 'Future AWS Agent Engineer',
+    subtitle: 'Cloud & IA · Udacity · Programme AWS AI & ML Scholars',
+    description: `**Compétences acquises :**\n• <strong>Trois projets pratiques réalisés et validés, du chatbot au système multi-agents.</strong>\n• <em>Chatbot de support client avec Amazon Bedrock Flows et AWS Lambda.</em>\n• <em>Agent de support IA avec Bedrock AgentCore : recherche documentaire (RAG), mémoire et outils connectés via MCP.</em>\n• <em>Projet final, NovaMart : système de support e-commerce à 5 agents IA orchestrés.</em>\n• Conception et orchestration d'agents IA et de systèmes multi-agents avec Amazon Bedrock, AgentCore et Strands Agents SDK, outils intégrés via MCP\n• Services AWS : Lambda, DynamoDB, S3, IAM, CloudWatch, Bedrock Guardrails\n• Bénéfice : des assistants et agents IA capables de traiter de vraies demandes métier, en s'appuyant sur vos propres documents, avec des garde-fous et un suivi en production.`,
+    siteUrl: 'https://www.udacity.com/certificate/e/c2ea823a-900d-11f1-bc91-2fd67e87edbe',
+    siteLabel: 'Voir le certificat',
+  },
   {
     date: 'Novembre 2024 - Septembre 2025',
     title: 'Meta Full-Stack Developer Certificate',

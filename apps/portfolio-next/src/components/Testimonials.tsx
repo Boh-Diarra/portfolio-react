@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     image: '/img/team-4.webp',
-    text: "Boh a créé mon portfolio personnel avec un résultat au-delà de mes attentes. Grâce à son expertise, j'ai pu valoriser mes compétences en ligne et recevoir de nouvelles opportunités professionnelles. Je suis grandement satisfait de la qualité et du professionnalisme apportés à ce projet !",
+    text: "Boh a réalisé mon site internet avec une vraie capacité à comprendre mon besoin, à proposer des solutions pertinentes et à les transformer en un résultat concret, professionnel et fonctionnel. Disponible, sérieux et attentif aux détails, il a livré un site qui correspond pleinement à ce que je recherchais, aussi bien visuellement qu'en navigation. Je recommande son profil à toute entreprise ou tout professionnel à la recherche d'un développeur compétent et impliqué.",
     name: 'COULIBALY Oumar',
     title: 'Consultant en Communication & Marketing | Personal Branding',
   },
@@ -36,6 +36,12 @@ const testimonials = [
     text: "Boh a livré notre site corporate en seulement 2 semaines avec une qualité exceptionnelle. Résultat : 70% d'augmentation de notre visibilité en ligne et 45% de demandes commerciales en plus. Un développeur qui comprend les enjeux business !",
     name: 'Mahamadou Tounkara',
     title: 'Digital communication and Marketing Manager at the NBB-Mali',
+  },
+  {
+    image: '/img/testimonial-saguin.webp',
+    text: "Boh a réalisé un excellent travail, à la hauteur de mes attentes : un design moderne, une navigation fluide et un rendu très professionnel. Il a su comprendre ma vision et la retranscrire avec qualité et précision. Je recommande vivement ses services : impliqué, disponible et professionnel tout au long du projet.",
+    name: 'Saguin Sidi Oumar Baba',
+    title: 'CEO - SMCPH-Mali',
   },
 ];
 
