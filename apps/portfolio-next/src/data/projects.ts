@@ -95,24 +95,46 @@ export const caseStudies: CaseStudy[] = [
     siteUrl: 'https://smcph-mali.com',
   },
   {
-    title: 'Akxa Digital',
-    tagline: "Site vitrine & plateforme d'agence · Marketing digital / Formation",
-    image: '/img/Akxadigital.webp',
+    title: 'Aw Ni Keneya',
+    tagline: 'Web TV santé & plateforme de sensibilisation · Santé publique / Impact social',
+    image: '/img/awnikeneya.webp',
     context:
-      "Akxa Digital est une agence de marketing digital basée à Bamako et active à l'international, qui aide les entreprises à gagner en visibilité, générer des leads et former leurs équipes au marketing et à l'IA. En tant que responsable marketing digital et IT de l'agence, j'ai pris en charge sa plateforme web.",
+      "L'association Aw Ni Keneya agit pour l'information sanitaire et la prévention au Mali. Elle souhaitait une plateforme numérique capable de diffuser ses émissions, de rendre l'information santé accessible au plus grand nombre et de mobiliser ses publics autour de la prévention.",
     challenge:
-      "Doter l'agence d'un site à la hauteur de son propre discours : une vitrine crédible de son expertise et un véritable outil de génération de leads et de ventes de formations.",
+      "Réunir sur un même site un média (émissions et replays), une base de contenus santé et des outils de participation, tout en gardant une navigation simple pour des publics très variés et un back-office que l'association peut alimenter seule.",
     solution: [
-      'Refonte complète du site, puis évolution continue de la plateforme',
-      "Présentation structurée des services de l'agence",
-      'Page dédiée aux formations, pensée comme un levier de vente',
-      "Blog éditorial pour le référencement et l'autorité de la marque",
-      'Système de prise de contact et de captation de leads',
+      "Web TV et rubrique de replays, avec agenda des émissions et inscription aux rappels d'émission",
+      'Rubrique Santé, alimentée par une base de contenus de prévention et de bien-être',
+      'Espace Interactivité : questions-réponses et quiz de la semaine',
+      'Jeux-concours de mobilisation, avec règlement dédié',
+      'Page consacrée à la couverture maladie (Aw Ni Keneya & RAMU)',
+      "Présentation de l'association : mission, membres du bureau et partenaires",
+      "Un modèle de contenus structuré, pour que l'équipe publie sans toucher à la mise en page",
+      'Sécurité, sauvegardes, référencement et politique de confidentialité intégrés dès la conception',
     ],
     result:
-      "+20 % de visibilité en ligne et une hausse des achats de formations, pour une plateforme devenue un véritable outil commercial de l'agence.",
-    siteLabel: 'akxadigital.com',
-    siteUrl: 'https://akxadigital.com',
+      "Une plateforme santé complète, que l'association administre en autonomie. La plateforme a été présentée par l'association, en présence de son président, devant la Commission Santé du Conseil national de Transition (CNT), l'OMS et la Banque mondiale.",
+    siteLabel: 'awnikeneya.org',
+    siteUrl: 'https://awnikeneya.org',
+  },
+  {
+    title: 'Réponse à incident & sécurisation web',
+    tagline: 'Cybersécurité & infrastructure · Groupe industriel ouest-africain',
+    image: '/img/cybersecurite.webp',
+    context:
+      'Un groupe industriel ouest-africain a constaté une compromission touchant plusieurs de ses sites et applications web, hébergés sur un même environnement.',
+    challenge:
+      "Neutraliser la menace sans perdre de données, empêcher la réinfection d'un site à l'autre, et remettre en service ce qui pouvait l'être en toute sécurité.",
+    solution: [
+      'Confinement des instances compromises et préservation des éléments de preuve',
+      "Investigation : recherche d'indicateurs de compromission, de portes dérobées et de mécanismes de persistance",
+      'Analyse des fichiers applicatifs, des composants du systeme, des bases de données et des comptes administrateurs',
+      'Remédiation : suppression des éléments malveillants, réinstallation des composants depuis des sources fiables et restauration contrôlée des services',
+      'Renforcement de la sécurité et contrôles contre la réinfection',
+      'Tests HTTP, PHP et applicatifs, puis documentation de chaque vérification',
+    ],
+    result:
+      '12 environnements web examinés et validés selon une grille de contrôle de sécurité. Les services sains ont été remis en ligne ; les instances anciennes ou jugées à risque ont été sécurisées et maintenues en confinement.',
   },
 ];
 
@@ -168,6 +190,20 @@ export const gridProjects: GridProject[] = [
     category: 'Sites Web',
     image: '/img/Djoliba_show.webp',
     link: 'https://djoliba-show.com/',
+  },
+  {
+    title: 'Akxa Digital',
+    description: "Refonte complète et évolution du site d'une agence de marketing digital : services, formations, blog et captation de leads.",
+    category: 'Sites Web',
+    image: '/img/Akxadigital.webp',
+    link: 'https://akxadigital.com/',
+  },
+  {
+    title: 'Oumar Coulibaly',
+    description: "Site de personal branding d'un consultant en communication : services, blog, conférences, bibliothèque d'e-books et prise de rendez-vous en ligne.",
+    category: 'Sites Web',
+    image: '/img/oumar-coulibaly.webp',
+    link: 'https://oumarcoulibaly.com/',
   },
 ];
 

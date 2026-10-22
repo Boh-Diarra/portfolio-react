@@ -58,7 +58,7 @@ export const TimelineItem: React.FC<{ item: TimelineItemProps; index: number }> 
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white rounded-lg font-semibold shadow hover:scale-105 transition-transform"
                   >
-                    Voir le site
+                    {item.siteLabel ?? 'Voir le site'}
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7h-6a4 4 0 00-4 4v6" />
                     </svg>
@@ -103,7 +103,7 @@ export const TimelineItem: React.FC<{ item: TimelineItemProps; index: number }> 
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white rounded-lg font-semibold shadow hover:scale-105 transition-transform"
                     >
-                      Voir le site
+                      {item.siteLabel ?? 'Voir le site'}
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7h-6a4 4 0 00-4 4v6" />
                       </svg>
@@ -153,7 +153,7 @@ export const TimelineItem: React.FC<{ item: TimelineItemProps; index: number }> 
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#E8732A] to-[#C2410C] text-white rounded-lg font-semibold shadow hover:scale-105 transition-transform"
                     >
-                      Voir le site
+                      {item.siteLabel ?? 'Voir le site'}
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7h-6a4 4 0 00-4 4v6" />
                       </svg>

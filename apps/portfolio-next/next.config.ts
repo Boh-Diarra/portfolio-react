@@ -1,5 +1,20 @@
 import type { NextConfig } from "next";
 
+// Content-Security-Policy (Report-Only) : Vercel Analytics, Vercel Live (previews) et Web3Forms
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://vercel.live",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://api.web3forms.com https://va.vercel-scripts.com https://vercel.live",
+  "frame-src https://vercel.live",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+].join('; ');
+
 const nextConfig: NextConfig = {
   // Optimisations de performance
   experimental: {
@@ -41,10 +56,6 @@ const nextConfig: NextConfig = {
             value: 'DENY',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
@@ -56,6 +67,21 @@ const nextConfig: NextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload',
           },
+          {
+            // Mode observation : les violations sont signalées dans la console, rien n'est bloqué
+            key: 'Content-Security-Policy-Report-Only',
+            value: contentSecurityPolicy,
+          },
+        ],
+      },
+      {
+        // Images non versionnées : cache d'une semaine (au lieu d'un an immutable)
+        source: '/img/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800',
+          },
         ],
       },
     ];
@@ -63,11 +89,11 @@ const nextConfig: NextConfig = {
   
   // Optimisation des images
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
+    dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   

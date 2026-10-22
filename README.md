@@ -1,175 +1,73 @@
-# Portfolio React - Monorepo
+# Portfolio — Boh DIARRA
 
-## 📋 Description
+Portfolio de Boh DIARRA, développeur Fullstack & WordPress à Bamako (Mali) : études de cas, réalisations, expériences, certifications et compétences.
 
-Ce monorepo contient mon portfolio personnel développé avec les technologies modernes. Le projet est structuré en monorepo pour une meilleure organisation et réutilisabilité du code.
+**Site en ligne : [bohdiarra.vercel.app](https://bohdiarra.vercel.app)**
 
-## 🏗️ Architecture
+## Stack
+
+- [Next.js 15](https://nextjs.org/) (App Router) et React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion, Swiper, next-themes (thème clair / sombre)
+- Vercel (hébergement et Vercel Analytics), Web3Forms (formulaire de suggestion)
+
+## Structure
 
 ```
-Portfolio-react/
-├── apps/
-│   └── portfolio-next/          # Application Next.js principale
+.
+├── apps/portfolio-next/     # Application Next.js
+│   ├── public/img/          # Images et CV
+│   └── src/
+│       ├── app/             # Pages, layout, métadonnées SEO, robots, sitemap
+│       ├── components/      # Composants React
+│       ├── config/          # Coordonnées et réseaux sociaux
+│       ├── data/            # Contenus : projets, expériences, certifications
+│       ├── hooks/           # Hooks React
+│       └── utils/           # Utilitaires
+└── .github/workflows/       # CI : lint, types et build
 ```
 
-## 🚀 Technologies Utilisées
+## Lancer le projet en local
 
-### Frontend
-- **Next.js 15** - Framework React avec App Router
-- **React 19** - Bibliothèque UI
-- **TypeScript** - Typage statique
-- **Tailwind CSS 4** - Framework CSS utilitaire
-- **Framer Motion** - Animations fluides
-- **React Icons** - Icônes SVG
-- **Swiper** - Carrousel interactif
-- **Next Themes** - Gestion des thèmes (clair/sombre)
-
-### Outils de Développement
-- **ESLint** - Linting du code
-- **PostCSS** - Traitement CSS
-- **Autoprefixer** - Préfixes CSS automatiques
-
-## 📦 Installation
-
-### Prérequis
-- Node.js 18+ 
-- npm, yarn, pnpm ou bun
-
-### Installation des dépendances
+Prérequis : Node.js 22 ou plus récent, npm.
 
 ```bash
-# Installation des dépendances du monorepo
-npm install
-
-# Ou avec yarn
-yarn install
-```
-
-## 🛠️ Scripts Disponibles
-
-### Monorepo (racine)
-```bash
-# Installation des dépendances
-npm install
-
-# Lancer tous les projets en développement
+git clone https://github.com/Boh-Diarra/portfolio-react.git
+cd portfolio-react
+npm ci
 npm run dev
 ```
 
-### Application Next.js (apps/portfolio-next)
-```bash
-# Aller dans le répertoire de l'application
-cd apps/portfolio-next
+Le site est alors disponible sur http://localhost:3000.
 
-# Développement
-npm run dev
+Variables d'environnement (facultatives) : copier `env.example` vers `apps/portfolio-next/.env.local`. Sans clé Web3Forms, le formulaire de suggestion bascule sur un envoi par e-mail.
 
-# Build de production
-npm run build
+### Scripts (à la racine)
 
-# Démarrer en production
-npm run start
+| Commande | Rôle |
+|---|---|
+| `npm run dev` | Serveur de développement |
+| `npm run build` | Build de production |
+| `npm run start` | Serveur de production (après `build`) |
+| `npm run lint` | ESLint |
+| `npm run type-check` | Vérification TypeScript |
 
-# Linting
-npm run lint
+### Commits
 
-# Analyse du bundle
-npm run analyze
+Les messages suivent [Conventional Commits](https://www.conventionalcommits.org/) (`feat`, `fix`, `docs`, `chore`, `ci`…), vérifiés par commitlint. Avant chaque commit, Husky lance le lint et la vérification des types.
 
-# Export statique
-npm run export
-```
+## Déploiement
 
-## 🌐 Déploiement
+Le déploiement est automatique : chaque push sur `master` est mis en production sur Vercel, et chaque autre branche ou pull request reçoit une URL de preview. La CI GitHub Actions vérifie le lint, les types et le build sur `master` et sur les pull requests.
 
-### Vercel (Recommandé)
-```bash
-# Déploiement automatique avec Vercel
-vercel --prod
-```
+## Licence
 
-### Export Statique
-```bash
-npm run export
-```
+Le **code source** est publié sous licence [MIT](LICENSE).
 
-## 📁 Structure du Projet
+Les photos, les témoignages, les captures de projets clients, le CV et les textes du site sont **tous droits réservés** et ne peuvent pas être réutilisés sans autorisation écrite. Voir [LICENSE](LICENSE).
 
-### Apps
-- **portfolio-next** : Application principale Next.js avec toutes les fonctionnalités modernes
+## Contact
 
-### Composants Principaux
-- `Header.tsx` - Navigation et header
-- `Hero.tsx` - Section d'accueil
-- `About.tsx` - Section à propos
-- `Skills.tsx` - Compétences techniques
-- `Portfolio.tsx` - Projets réalisés
-- `Experience.tsx` - Expérience professionnelle
-- `Contact.tsx` - Formulaire de contact
-
-## 🎨 Fonctionnalités
-
-### ✅ Implémentées
-- [x] Design responsive et moderne
-- [x] Mode sombre/clair
-- [x] Animations fluides avec Framer Motion
-- [x] Navigation fluide avec scroll
-- [x] Portfolio interactif avec lightbox
-- [x] Formulaire de contact fonctionnel
-- [x] Optimisation SEO
-- [x] Performance optimisée
-- [x] Accessibilité (WCAG)
-
-### 🔄 En Cours
-- [ ] Tests unitaires
-- [ ] Tests d'intégration
-- [ ] CI/CD pipeline
-- [ ] Documentation API
-
-## 🧪 Tests
-
-```bash
-# Lancer les tests (à implémenter)
-npm run test
-
-# Tests de linting
-npm run lint
-```
-
-## 📝 Contribution
-
-1. Fork le projet
-2. Créer une branche feature (`git checkout -b feature/AmazingFeature`)
-3. Commit les changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrir une Pull Request
-
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 👨‍💻 Auteur
-
-**Boh Diarra**
-- Portfolio: [boh-diarra.vercel.app]
-- LinkedIn: [https://www.linkedin.com/in/boh-diarra/]
-- GitHub: [https://github.com/Boh-Diarra]
-
-## 🙏 Remerciements
-
-- [Next.js](https://nextjs.org/) - Framework React
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [React Icons](https://react-icons.github.io/react-icons/) - Icônes
-
-## 📊 Statistiques
-
-![GitHub stars](https://img.shields.io/github/stars/Boh-Diarra/portfolio-react)
-![GitHub forks](https://img.shields.io/github/forks/Boh-Diarra/portfolio-react)
-![GitHub issues](https://img.shields.io/github/issues/Boh-Diarra/portfolio-react)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Boh-Diarra/portfolio-react)
-![GitHub license](https://img.shields.io/github/license/Boh-Diarra/portfolio-react)
-
----
-
-⭐ Si ce projet vous plaît, n'hésitez pas à le star sur GitHub ! 
+- LinkedIn : [linkedin.com/in/boh-diarra](https://www.linkedin.com/in/boh-diarra/)
+- GitHub : [github.com/Boh-Diarra](https://github.com/Boh-Diarra)

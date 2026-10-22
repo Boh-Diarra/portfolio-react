@@ -14,8 +14,8 @@ interface LearningItem {
 
 const learningItems: LearningItem[] = [
   {
-    name: 'AWS Cloud Technical Essentials',
-    description: "Découverte des fondamentaux du cloud AWS : services, déploiement, sécurité et gestion d'infrastructure.",
+    name: 'AWS Cloud Practitioner Essentials',
+    description: "Fondamentaux du cloud AWS : services de base, sécurité, tarification et bonnes pratiques d'architecture.",
     progress: 70,
     icon: <FaAws color="#FF9900" />,
     status: 'learning',

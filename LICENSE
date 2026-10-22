@@ -18,4 +18,28 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+Portée de la licence / Scope of this license
+
+La licence MIT ci-dessus s'applique uniquement au code source (fichiers de code
+et de configuration).
+
+Les contenus suivants ne sont PAS couverts par la licence MIT et restent
+« tous droits réservés » (all rights reserved) :
+
+- les photos, portraits et images (dossier apps/portfolio-next/public/img,
+  images de partage de apps/portfolio-next/src/app) ;
+- les témoignages et les noms, fonctions et photos de leurs auteurs ;
+- les captures d'écran et visuels des projets clients, qui restent la propriété
+  de leurs détenteurs respectifs ;
+- le CV ;
+- les textes du site (présentation, études de cas, expériences, services).
+
+Toute réutilisation de ces contenus nécessite une autorisation écrite préalable.
+
+The MIT license above applies to the source code only. Photos, testimonials,
+client project screenshots, the résumé and the website copy are all rights
+reserved and may not be reused without prior written permission.

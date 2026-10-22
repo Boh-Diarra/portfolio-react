@@ -10,7 +10,6 @@ const teamMembers = [
     role: 'Senior Fullstack Developer & DevOps Engineer',
     description: 'Développe vos applications web et mobiles avec des technologies modernes et performantes.',
     social: {
-      whatsapp: 'https://wa.me/22375358229',
       facebook: 'https://www.facebook.com/ibrahima.kone.21291',
       linkedin: 'https://www.linkedin.com/in/ibrahima-kon%C3%A9-632006a1/',
     },
@@ -21,7 +20,6 @@ const teamMembers = [
     role: 'Graphic Designer & Brand Identity Specialist',
     description: 'Crée votre identité visuelle complète : logo, charte graphique et supports de communication.',
     social: {
-      whatsapp: 'https://wa.me/22393598188',
       facebook: 'https://www.facebook.com/job.karambe',
       linkedin: 'https://www.linkedin.com/in/job-karamb%C3%A9-830b93231/',
     },
@@ -32,7 +30,6 @@ const teamMembers = [
     role: 'Community Manager & Content Creator',
     description: 'Anime votre communauté en ligne et crée du contenu engageant pour vos réseaux sociaux.',
     social: {
-      whatsapp: 'https://wa.me/22394459442',
       facebook: 'https://www.facebook.com/profile.php?id=100008072359207',
       linkedin: 'https://www.linkedin.com/in/sanogo-modibo-136121248/',
     },
@@ -43,7 +40,6 @@ const teamMembers = [
     role: 'Consultant en Communication, Digital & Personal Branding',
     description: 'Développe votre image de marque personnelle et optimise votre présence digitale.',
     social: {
-      whatsapp: 'https://wa.me/22376289390',
       facebook: 'https://www.facebook.com/oumarcoulibaly22',
       linkedin: 'https://www.linkedin.com/in/oumar-coulibaly76289390/',
     },
@@ -79,10 +75,7 @@ export default function Team() {
                 <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300">{member.description}</p>
                 <div className="team-social mt-4 flex justify-center space-x-3">
                   {/* Liens réseaux sociaux temporairement désactivés pour protéger le business model */}
-                  {/* <Link href={member.social.whatsapp} target="_blank" className="icon-social text-green-500 hover:text-green-600">
-                    <FaWhatsapp size={24} />
-                  </Link>
-                  <Link href={member.social.facebook} target="_blank" className="icon-social text-blue-600 hover:text-blue-700">
+                  {/* <Link href={member.social.facebook} target="_blank" className="icon-social text-blue-600 hover:text-blue-700">
                     <FaFacebookF size={24} />
                   </Link>
                   <Link href={member.social.linkedin} target="_blank" className="icon-social text-blue-700 hover:text-blue-800">

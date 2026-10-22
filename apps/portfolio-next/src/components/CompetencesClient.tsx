@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import Learning from '@/components/Learning';
 import Image from 'next/image';
-import { FaJs, FaReact, FaNode, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaDatabase, FaWordpress, FaWindows, FaLinux, FaUserShield, FaTerminal,FaCloud, FaBootstrap, FaWix, FaShopify } from 'react-icons/fa6';
+import { FaJs, FaReact, FaNode, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaDatabase, FaWordpress, FaWindows, FaLinux, FaUserShield, FaTerminal,FaCloud, FaBootstrap, FaWix, FaShopify, FaAws, FaRobot, FaMagnifyingGlass, FaServer, FaShieldHalved, FaLock } from 'react-icons/fa6';
 import { SkillCategorySection } from './SkillCategorySection';
 export interface Skill {
   name: string;
@@ -12,7 +12,7 @@ export interface Skill {
   years: number;
   logo: React.ReactNode;
   description: string;
-  category: 'frontend' | 'backend' | 'database' | 'tools' | 'mobile' | 'cms' | 'it';
+  category: 'frontend' | 'backend' | 'database' | 'tools' | 'mobile' | 'cms' | 'it' | 'ai';
 }
 
 const skills: Skill[] = [
@@ -36,7 +36,7 @@ const skills: Skill[] = [
     name: 'Next.js',
     level: 75,
     years: 2,
-    logo: <Image src="/img/nextjs.svg" alt="Next.js" width={32} height={32} className="object-contain aspect-square mx-auto" />,
+    logo: <Image src="/img/nextjs.svg" alt="Next.js" width={32} height={32} unoptimized className="object-contain aspect-square mx-auto" />,
     description: "Framework React pour le développement d'applications web performantes, avec rendu côté serveur et génération statique.",
     category: 'frontend',
   },
@@ -60,7 +60,7 @@ const skills: Skill[] = [
     name: 'Django',
     level: 75,
     years: 2,
-    logo: <Image src="/img/django.svg" alt="Django" width={32} height={32} className="object-contain aspect-square mx-auto" />,
+    logo: <Image src="/img/django.svg" alt="Django" width={32} height={32} unoptimized className="object-contain aspect-square mx-auto" />,
     description: "Framework Python robuste pour créer des applications web sécurisées et évolutives rapidement.",
     category: 'backend',
   },
@@ -76,7 +76,7 @@ const skills: Skill[] = [
     name: 'React Native',
     level: 65,
     years: 1,
-    logo: <Image src="/img/react-native.svg" alt="React Native" width={32} height={32} className="object-contain aspect-square mx-auto" />,
+    logo: <Image src="/img/react-native.svg" alt="React Native" width={32} height={32} unoptimized className="object-contain aspect-square mx-auto" />,
     description: "Framework pour créer des applications mobiles natives avec React et JavaScript.",
     category: 'mobile',
   },
@@ -84,7 +84,7 @@ const skills: Skill[] = [
     name: 'Tailwind CSS',
     level: 85,
     years: 2,
-    logo: <Image src="/img/tailwindcss.svg" alt="Tailwind CSS" width={32} height={32} className="object-contain aspect-square mx-auto" />,
+    logo: <Image src="/img/tailwindcss.svg" alt="Tailwind CSS" width={32} height={32} unoptimized className="object-contain aspect-square mx-auto" />,
     description: "Framework CSS utilitaire pour un design rapide, moderne et responsive.",
     category: 'tools',
   },
@@ -184,6 +184,54 @@ const skills: Skill[] = [
     description: "Plateforme de virtualisation pour créer, gérer et déployer des machines virtuelles et infrastructures cloud.",
     category: 'it',
   },
+  {
+    name: 'Sécurité web & réponse à incident',
+    level: 65,
+    years: 1,
+    logo: <FaLock color="#C2410C" />,
+    description: "Investigation et remédiation de sites WordPress/PHP compromis, durcissement et contrôles post-incident.",
+    category: 'it',
+  },
+  {
+    name: 'Amazon Bedrock & AgentCore',
+    level: 60,
+    years: 1,
+    logo: <FaAws color="#FF9900" />,
+    description: "Conception et déploiement d'agents IA sur l'infrastructure AWS.",
+    category: 'ai',
+  },
+  {
+    name: 'Strands Agents SDK',
+    level: 60,
+    years: 1,
+    logo: <FaRobot color="#FF6B35" />,
+    description: "Framework Python pour construire des agents et orchestrer des systèmes multi-agents.",
+    category: 'ai',
+  },
+  {
+    name: 'RAG & Knowledge Bases',
+    level: 60,
+    years: 1,
+    logo: <FaMagnifyingGlass color="#E8732A" />,
+    description: "Réponses fondées sur des documents métier grâce à la recherche augmentée.",
+    category: 'ai',
+  },
+  {
+    name: 'AWS Lambda, DynamoDB & S3',
+    level: 60,
+    years: 1,
+    logo: <FaServer color="#FF9900" />,
+    description: "Fonctions serverless, base de données NoSQL et stockage pour applications cloud.",
+    category: 'ai',
+  },
+  {
+    name: 'CloudWatch & Guardrails',
+    level: 60,
+    years: 1,
+    logo: <FaShieldHalved color="#C2410C" />,
+    description: "Supervision, journalisation et garde-fous de sécurité des agents IA.",
+    category: 'ai',
+  },
 ];
 
 const categories = {
@@ -194,6 +242,7 @@ const categories = {
   mobile: { title: 'Mobile', color: 'from-orange-500 to-red-500' },
   cms: { title: 'CMS', color: 'from-indigo-500 to-blue-500' },
   it: { title: 'IT Support & Admin', color: 'from-teal-500 to-green-500' },
+  ai: { title: 'IA & Cloud (AWS)', color: 'from-amber-500 to-orange-600' },
 };
 
 const CompetencesClient = () => {

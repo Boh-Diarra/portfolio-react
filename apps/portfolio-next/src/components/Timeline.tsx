@@ -11,6 +11,7 @@ export interface TimelineItemProps {
   description: string;
   credlyUrl?: string;
   siteUrl?: string; // Lien du site pour les expériences professionnelles
+  siteLabel?: string; // Libellé du bouton siteUrl (défaut : « Voir le site »)
 }
 
 export interface TimelineProps {
