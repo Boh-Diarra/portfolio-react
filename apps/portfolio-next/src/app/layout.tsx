@@ -6,11 +6,36 @@ import "../styles/components.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from '@/components/ThemeProvider';
 import FeedbackWidget from "@/components/FeedbackWidget";
+import { socialLinks } from "@/config/socialLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteUrl = "https://bohdiarra.vercel.app";
+
+// Données structurées (JSON-LD) : profil de la personne
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Boh DIARRA",
+  jobTitle: "Développeur Fullstack & WordPress",
+  url: siteUrl,
+  image: `${siteUrl}/img/Profil2.webp`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bamako",
+    addressCountry: "ML",
+  },
+  sameAs: socialLinks
+    .filter((link) => link.name === "linkedin" || link.name === "github")
+    .map((link) => link.href),
+};
+
 export const metadata: Metadata = {
-  title: "Développeur Fullstack & WordPress · Marketing Digital | Portfolio",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Boh DIARRA · Développeur Fullstack & WordPress à Bamako",
+    template: "%s | Boh DIARRA",
+  },
   description: "Portfolio de Boh DIARRA, développeur fullstack & WordPress et responsable marketing digital à Bamako. Sites web, applications mobiles et marketing digital pour faire grandir votre activité.",
   keywords: ["Boh DIARRA", "Développeur Fullstack", "Développeur Web", "Développeur Mobile", "WordPress", "Marketing Digital", "React", "Next.js", "Portfolio", "Bamako", "Mali"],
   authors: [{ name: "Boh DIARRA" }],
@@ -43,6 +68,10 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <ThemeProvider 
           attribute="class" 
           defaultTheme="system" 
