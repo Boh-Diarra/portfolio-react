@@ -58,6 +58,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://bohdiarra.vercel.app",
   },
+  verification: {
+    google: "475H7Y9ZXFW_VcEJv6RvGbCPD75w9Altx7bNCIz2xVs",
+  },
 };
 
 export default function RootLayout({
